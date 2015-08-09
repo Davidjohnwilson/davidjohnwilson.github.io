@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <p>Welcome to the personal website of David John Wilson. 
+
+  <h3>{% icon fa-bar-chart %} Data Scientist</h3>
+    <p>I am very interested in the increasing role of Data in business, and what can be gleamed from analysis of various data sources. I have experience in working with video-based data, am completing the Udacity Data Analyst nanodegree, and building a portfolio of interesting data studies.</p>
+    <p>I will be posting interesting data studies on this site below, as well as discussions of technologies and frameworks I use.</p>
+    <center><p><a href="./developer/index.html">{% icon fa-bar-chart %} Learn More about Data Science {% icon fa-bar-chart %}</a></p></center>
+
+  <h3>{% icon fa-laptop %} Developer</h3>
+    <p>Having spent three years researching for my PhD in theoretical computer science, I am  making the transition into industry. Based in San Francisco, I am currently working for <a href="http://www.guidespark.com" target="_blank">GuideSpark</a> as a Data Engineer, and was originally hired as part of the <a href="http://www.siliconvalleyinternship.com/" target="_blank">Silicon Valley Internship Programme</a>.</p>
+    <center><p><a href="./developer/index.html">{% icon fa-laptop %} Learn More about Software Development {% icon fa-laptop %}</a></p></center>
+
+  <h3>{% icon fa-flask %} Researcher</h3>
+    <p>I completed my undergraduate degree in Mathematics at the University of Oxford, and gained a Masters in Pure Mathematics at Rutgers, State University of New Jersey, under a Fulbright Scholarship. I have spent the last three years completing a PhD in Computer Science (in particular, Computer Algebra and Real Algebraic Geometry) at the University of Bath, supervised by Prof. James H. Davenport and Dr Russell Bradford.</p>
+    <p>I have many peer-reviewed publications and have presented at various international conferences.</p>
+    <center><p><a href="./researcher/index.html">{% icon fa-flask %} Learn More about Research {% icon fa-flask %}</a></p></center>
+
+  <h3>{% icon fa-newspaper-o %} Reviewer</h3>
+    <p>I started learning ballet in my early twenties, and have reviewed performances and written features for various websites. I am passionate about engaging new ballet audiences, and have worked recently with the Royal Opera House and other organisations to this end.</p>
+    <center><p><a href="./reviewer/index.html">{% icon fa-newspaper-o %} Learn More about Reviews {% icon fa-newspaper-o %}</a></p></center>
+    
+
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        {{ post.excerpt }}
+        Tags: {% for tag in post.tags %}  <b>{{tag}}</b>  {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

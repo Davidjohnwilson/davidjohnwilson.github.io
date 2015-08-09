@@ -1,0 +1,508 @@
+#===================================================
+#
+#  Examples for CAD - QEPCAD file
+#   Each example is given with their inputs for
+#   QEPCAD for easy copy/pasting
+#
+#  Version 4.0 - 1/4/13
+#===================================================
+
+#===================================================
+# CMXY09 Examples
+# Examples sourced from "Computing Cylindrical Alg-
+# -ebraic Decomposition via Triangular Decomposition"
+
+#1: Parametric Parabola
+[Parametric Parabola]
+(a,b,c,x)
+3
+(E x)[a x^2 + b x + c = 0].
+
+#2: Whitney Umbrella
+[Whitney Umbrella]
+(x,y,z,u,v)
+3
+(E u)(E v)[[x - u v = 0] /\ [y - v = 0] /\ [z - u^2 = 0]].
+
+#3: Quartic
+[Positivity of Quartic] 
+(r,q,p,x)
+3
+(A x)[x^4 + p x^2 + q x + r >= 0].
+
+#4: Sphere and Catastrophe
+[Sphere and Catastrophe]
+(z,y,x)
+3
+[[z^2 + y^2 + x^2 - 1 = 0] /\ [z^3 + x z + y = 0]].
+
+#5: Arnon-84
+[Arnon-84]
+(x,y)
+2
+[y^4 - 2 y^3 + y^2 - 3 x^2 y + 2 x^4 = 0].
+
+#6: Arnon-84-2
+[Arnon-84-2]
+(x,y)
+2
+[[144 y^2 + 96 x^2 y + 9 x^4 + 105 x^2 + 70 x - 98 = 0] /\ [x y^2 + 6 x y + x^3 + 9 x = 0]].
+
+#7: A Real Implicitization Problem
+[A Real Implicitization Problem]
+(x,y,z,u,v)
+3
+(E u)(E v)[[x - u v = 0] /\ [y - u v^2 = 0] /\ [z - u^2 = 0]].
+
+#8: Ball and Circular Cylinder
+[Ball and Circular Cylinder]
+(x,y,z)
+0
+(E z)(E x)(E y)[[x^2 + y^2 + z^2 - 1 < 0] /\ [x^2 + (y + z - 2)^2 - 1 < 0]].
+
+#9: Termination of Term Rewrite System
+[Term Rewrite]
+(r,x,y)
+0
+(E r)(A x)(A y)[[[x - r > 0] /\ [y - r > 0]] ==> [x^2 (1 + 2 y)^2 - y^2 (1 + 2 x^2) > 0]].
+
+#10: Collins and Johnson
+[Collins and Johnson]
+(b,a,r)
+2
+(E r)[[3 a^2 r + 3 b^2 - 2 a r - a^2 - b^2 < 0] /\ [3 a^2 r + 3 b^2 r - 4 a r + r - 2 a^2 - 2 b^2 + 2 a > 0] /\ [2 a - 1 >= 0] /\ [b > 0] /\ [r > 0] /\ [r - 1 < 0]].
+
+#11: Range of Lower Bounds
+[Range of Lower Bounds]
+(y,x,a,b,c,z)
+1
+(A x)(A a)(A b)(A c)(E z)[[[a > 0] /\ [a z^2 + b z + c /= 0]] ==> [y < a x^2 + b x + c]].
+
+#12: X-axis Ellipse Problem
+[X-axis Ellipse Problem]
+(a,c,b,x,y)
+3
+(A x)(A y)[[a b /= 0] /\ [[b^2 (x - c)^2 + a^2 y^2 - a^2 b^2 = 0]==>[x^2 + y^2 - 1 <= 0]]].
+
+#13: Davenport and Heintz
+[Davenport and Heintz]
+(d,c,b,a)
+1
+(E c)(A b)(A a)[[[[a - d = 0] /\ [b - c = 0]] \/ [[a - c = 0] /\ [b - 1 = 0]]] ==> [a^2 - b = 0]].
+
+#14: Hong-90
+[Hong-90]
+(r,s,t,a,b)
+3
+(E a)(E b)[[r + s + t = 0] /\ [r s + s t + t r - a = 0] /\ [r s t - b = 0]].
+
+#15: Solotareff-3
+[Solotareff-3]
+(a,r,b,u,v)
+3
+(E u)(E v)[[r > 1] /\ [u + 1 > 0] /\ [u - v < 0] /\ [v - 1 < 0] /\ [3 u^2 + 2 r u - a = 0] /\ [3 v^2 + 2 r v - a = 0] /\ [u^3 + r u^2 - a u + a - r - 1 = 0] /\ [v^3 +r v^2 - a v - 2 b - a + r + 1 = 0]].
+
+#16: Collision Problem
+[Collision of Circle and Square]
+(y,x,t)
+0
+(E y)(E x)(E t)[[17 t - 96 >= 0] /\ [17 t - 160 <= 0] /\ [16 x - 17 t + 16 >= 0] /\ [16 x - 17 t - 16 <= 0] /\ [16 y - 17 t + 144 >= 0] /\ [16 y - 17 t + 112 <= 0] /\ [(x - t)^2 + y^2 - 1 <= 0]].
+
+#17: McCallum Trivariate Random Polynomial
+[McCallum Trivariate Random Polynomial]
+(x,y,z)
+0
+(E x)(E y)(E z)[(y - 1) z^4 + x z^3 + x (1 - y) z^2 + (y - x - 1) z + y = 0].
+
+#18: Ellipse Problem
+[Ellipse Problem]
+(a,b,c,d,x,y)
+4
+(A x)(A y)[[a b /= 0] /\ [[b^2 (x - c)^2 + a^2 (y - d)^2 - a^2 b^2 = 0] ==> [x^2 + y^2 - 1 <= 0]]].
+
+
+#===================================================
+# Branch Cut Examples
+# Examples from using CAD to deal with branch cuts
+
+#1: Kahan A
+[Kahan A]
+(x,y)
+2
+[[[4 y (2 y^2 x + 2 x^3 + 5 y^2 + 21 x^2 + 72 x + 81) = 0] /\ [ -225 x^2 - 324 x + 63 y^2 - 4 x^4 - 52 x^3 + 12 y^2 x + 4 y^4 < 0]] \/ [[2 y = 0] /\ [2 x + 9 < 0]] \/ [[8 y = 0] /\ [8 x^2 + 56 x + 8 y^2 + 96 < 0]] \/ [[y = 0] /\ [x^2 + 7 x + y^2 + 12 < 0]] \/ [[4 y (2 y^2 x + 2 x^3 + 5 y^2 + 21 x^2 + 72 x + 81) = 0] /\ [ -4 x^4 - 52 x^3 - 252 x^2 + 12 y^2 x - 540 x + 36 y^2 + 4 y^4 - 432 <= 0] /\ [4 x^4 + 52 x^3 + 225 x^2 - 12 y^2 x + 324 x - 63 y^2 - 4 y^4 < 0]] \/ [[2 y = 0] /\ [ -2 x - 6 < 0] /\ [ 2 x <= 0]] \/ [[8 y = 0] /\ [ -8 x^2 - 56 x - 8 y^2 - 96 < 0] /\ [2 x^2 + 8 x + 2 y^2 <= 0]]].
+
+#2: Kahan B
+[Kahan B]
+(y,x)
+2
+[[[4 y (2 y^2 x + 2 x^3 + 5 y^2 + 21 x^2 + 72 x + 81) = 0] /\ [ -225 x^2 - 324 x + 63 y^2 - 4 x^4 - 52 x^3 + 12 y^2 x + 4 y^4 < 0]] \/ [[2 y = 0] /\ [2 x + 9 < 0]] \/ [[8 y = 0] /\ [8 x^2 + 56 x + 8 y^2 + 96 < 0]] \/ [[y = 0] /\ [x^2 + 7 x + y^2 + 12 < 0]] \/ [[4 y (2 y^2 x + 2 x^3 + 5 y^2 + 21 x^2 + 72 x + 81) = 0] /\ [ -4 x^4 - 52 x^3 - 252 x^2 + 12 y^2 x - 540 x + 36 y^2 + 4 y^4 - 432 <= 0] /\ [4 x^4 + 52 x^3 + 225 x^2 - 12 y^2 x + 324 x - 63 y^2 - 4 y^4 < 0]] \/ [[2 y = 0] /\ [ -2 x - 6 < 0] /\ [ 2 x <= 0]] \/ [[8 y = 0] /\ [ -8 x^2 - 56 x - 8 y^2 - 96 < 0] /\ [2 x^2 + 8 x + 2 y^2 <= 0]]].
+
+#3: ArcSin A
+[ArcSin A]
+(x,y)
+2
+[[-2 x y = 0 /\ -x^2 + y^2 < -1] \/ [-8 x y (2 x^2 - 2 y^2 - 1) = 0 /\ 4 x^2 - 4 y^2 - 4 x^4 + 24 x^2 y^2 - 4 y^4 >= 1] \/ [y = 0 /\ 1 <= x] \/ [y = 0 /\ x <= -1]].
+
+#4: ArcSin B
+[ArcSin B]
+(y,x)
+2
+[[-2 x y = 0 /\ -x^2 + y^2 < -1] \/ [-8 x y (2 x^2 - 2 y^2 - 1) = 0 /\ 4 x^2 - 4 y^2 - 4 x^4 + 24 x^2 y^2 - 4 y^4 >= 1] \/ [y = 0 /\ 1 <= x] \/ [y = 0 /\ x <= -1]].
+
+#===================================================
+# Motion Planning Examples
+# Examples from using CAD to solve problems in robot
+# motion planning
+
+#1: Piano Mover's Problem (Davenport)
+[Piano Mover's Problem (Davenport)]
+(b,a,y,x)
+2
+(E y)(E x)[[(x - a)^2 + (y - b)^2 - 9 = 0] /\ [[y b >= 0] \/ [x (y - b)^2 + y (a - x) (y - b) >= 0]] /\ [[(y - 1) (b - 1) >= 0] \/ [(x + 1) (y - b)^2 + (y - 1) (a - x) (y - b) >= 0]] /\ [[x a >= 0] \/ [y (x - a)^2 + x (b - y) (x - a) >= 0]] /\ [[(x + 1) (a + 1) >= 0] \/ [(y - 1)(x - a)^2 + (x + 1) (b - y) (x - a) >= 0]]].
+
+
+#===================================================
+# Buchberger-Hong Examples
+# Examples from Buchberger and Hong's 1991 paper
+
+#1: Intersection A
+[Intersection A from Buchberger-Hong]
+(x,y,z)
+2
+(E z)[[x^2 - 1/2 y^2 - 1/2 z^2 = 0] /\ [x z + z y - 2 x = 0] /\ [ z^2 - y = 0]].
+
+#2: Intersection A Grobner
+[Intersection A Grobner from Buchberger-Hong]
+(x,y,z)
+2
+(E z)[[x^5 + 18 x^4 - 21 x^3 + 4 x^2 - 2 x = 0] /\ [y + 5/19 x^4 + 88/19 x^3 - 144/19 x^2 + 32/19 x = 0] /\ [z x - 7/38 x^4 - 127/38 x^3 + 59/19 x^2 - 11/19 x = 0] /\ [z^2 + 5/19 x^4 + 88/19 x^3 - 144/19 x^2 + 32/19 x = 0]].
+
+#3: Intersection B
+[Intersection B from Buchberger-Hong]
+(y,x,z)
+2 
+(E z)[[x^2 - 1/2 y^2 - 1/2 z^2 = 0] /\ [x z + z y - 2 x = 0] /\ [ z^2 - y = 0]].
+
+#4: Intersection B Grobner 
+[Intersection B Grobner from Buchberger-Hong]
+(y,x,z)
+2
+(E z)[[y^5 - 26 y^4 - 15 y^3 + 24 y^2 + 16 y = 0] /\ [x - 3/64 y^4 + 41/32 y^3 - 59/64 y^2 - 21/16 y = 0] /\ [z y - 1/8 y^4 + 27/8 y^3 - 5/4 y^2 - 3 y = 0] /\ [z^2 - y = 0]].
+
+#5: Random A
+[Random A from Buchberger-Hong]
+(x,y,z)
+0
+(E x)(A y)(E z)[[4 x^2 + x y^2 - z + 1/4 = 0] /\ [2 x + y^2 z + 1/2 = 0] /\ [x^2 z - 1/2 x - y^2 = 0 ]].
+
+#6: Random A Grobner
+[Random A Grobner from Buchberger-Hong]
+(x,y,z)
+0
+(E x)(A y)(E z)[[x^7 + 29/4 x^6 - 17/16 x^4 - 11/8 x^3 + 1/32 x^2 + 15/16 x + 14 = 0] /\ [y^2 + 112/2745 x^6 - 84/305 x^5 - 1264/305 x^4 - 13/549 x^3 + 84/305 x^2 + 1772/2745 x + 2/2745 = 0] /\ [z - 1568/2745 x^6 - 1264/305 x^5 + 6/305 x^4 + 182/549 x^3 - 2047/610 x^2 - 103/2745 x - 2857/10980]].
+
+#7: Random B
+[Random B from Buchberger-Hong]
+(z,y,x)
+0
+(E z)(A y)(E x)[[4 x^2 + x y^2 - z + 1/4 = 0] /\ [2 x + y^2 z + 1/2 = 0] /\ [x^2 z - 1/2 x - y^2 = 0 ]].
+
+#8: Random B Grobner
+[Random B Grobner from Buchberger-Hong]
+(z,y,x)
+0
+(E z)(A y)(E x)[[z^7 - 1/2 z^6 + 1/16 z^5 + 13/4 z^4 + 75/16 z^3 - 171/8 z^2 + 133/8 z - 15/4 = 0] /\ [y^2 - 19188/497 z^6 + 318/497 z^5 - 4197/1988 z^4 - 251555/1988 z^3 - 481837/1988 z^2 + 1407741/1988 z - 297833/994 = 0] /\ [x + 4638/497 z^6 - 75/497 z^5 + 2111/3976 z^4 + 61031/1988 z^3 + 232833/3976 z^2 - 85042/497 z + 144407/1988 = 0]].
+
+#9: Ellipse A
+[Ellipse A from Buchberger-Hong]
+(a,b,c,x,y)
+3
+(E x)(E y)[[x^2 + y^2 - 1 = 0] /\ [b^2 (x - c)^2 + a^2 y^2 - a^2 b^2 = 0] /\ [a > 0] /\ [a < 1] /\ [b > 0] /\ [b < 1] /\ [c >= 0] /\ [c < 1]].
+
+#10: Ellipse A Grobner
+[Ellipse A Grobner from Buchberger-Hong]
+(a,b,c,x,y)
+3
+(E x)(E y)[[x^2 b^2 - x^2 a^2 - 2 x c b^2 + c^2 b^2 - b^2 a^2 + a^2 = 0] /\ [y^2 + x^2 -1 = 0] /\ [a > 0] /\ [a < 1] /\ [b > 0] /\ [b < 1] /\ [c >= 0] /\ [c < 1]].
+
+#11: Ellipse B
+[Ellipse B from Buchberger-Hong]
+(a,b,c,y,x)
+3
+(E y)(E x)[[x^2 + y^2 - 1 = 0] /\ [b^2 (x - c)^2 + a^2 y^2 - a^2 b^2 = 0] /\ [a > 0] /\ [a < 1] /\ [b > 0] /\ [b < 1] /\ [c >= 0] /\ [c < 1]].
+
+#12: Ellipse B Grobner
+[Ellipse B Grobner from Buchberger-Hong]
+(a,b,c,y,x)
+3
+(E y)(E x)[[y^4 b^4 - 2 y^4 b^2 a^2 + y^4 a^4 + 2 y^2 c^2 b^4 + 2 y^2 c^2 b^2 a^2 + 2 y^2 b^4 a^2 - 2 y^2 b^4 - 2 y^2 b^2 a^4 + 2 y^2 b^2 a^2 + c^4 b^4 - 2 c^2 b^4 a^2 - 2 c^2 b^4 + b^4 a^4 - 2 b^4 a^2 + b^4 = 0] /\ [x y^2 c a^2 + 1/2 y^4 b^2 - 1/2 y^4 a^2 + y^2 c^2 b^2 + 1/2 y^2 c^2 a^2 + y^2 b^2 a^2 - y^2 b^2 - 1/2 y^2 a^4 + 1/2 y^2 a^2 + 1/2 c^4 b^2 - c^2 b^2 a^2 - c^2 b^2 + 1/2 b^2 a^4 - b^2 a^2 + 1/2 b^2 = 0] /\ [x y^2 b^2 - x y^2 a^2 + x b^2 a^2 - x b^2 - 3/2 y^2 c b^2 - 1/2 y^2 c a^2 - 1/2 c^3 b^2 + 1/2 c b^2 a^2 + 3/2 c b^2 = 0] /\ [x c b^2 + 1/2 y^2 b^2 - 1/2 y^2 a^2 - 1/2 c^2 b^2 + 1/2 b^2 a^2 - 1/2 b^2 = 0] /\ [x^2 + y^2 - 1 = 0] /\ [a > 0] /\ [a < 1] /\ [b > 0] /\ [b < 1] /\ [c >= 0] /\ [c < 1]].
+
+#13: Solotareff A
+[Solotareff A from Buchberger-Hong]
+(a,b,x,y)
+2
+(E x)(E y)[[3 x^2 - 2 x - a = 0] /\ [x^3 - x^2 - a x - 2 b + a - 2 = 0] /\ [3 y^2 - 2 y - a = 0] /\ [y^3 - y^2 - a y - a + 2 = 0] /\ [1 <= 4 a] /\ [4 a <= 7] /\ [-3 <= 4 b] /\ [4 b <= 3] /\ [-1 <= x] /\ [x <= 0] /\ [0 <= y] /\ [y <= 1]].
+
+#14: Solotareff A Grobner
+[Solotareff A Grobner from Buchberger-Hong]
+(a,b,x,y)
+2
+(E x)(E y)[[a^3 - 11 a^2 + 35 a - 25 = 0] /\ [b^2 - 2/3 b a + 56/27 b - 1/3 a^2 + 16/27 a + 4/27 = 0] /\ [x + 81/1024 b a^2 - 459/512 b a + 3141/1024 b + 93/1024 a^2 - 527/512 a + 2241/1024 = 0] /\ [y - 3/32 a^2 + 17/16 a - 63/32 = 0] /\ [1 <= 4 a] /\ [4 a <= 7] /\ [-3 <= 4 b] /\ [4 b <= 3] /\ [-1 <= x] /\ [x <= 0] /\ [0 <= y] /\ [y <= 1]].
+
+#15: Solotareff B
+[Solotareff B from Buchberger-Hong]
+(b,a,x,y)
+2
+(E x)(E y)[[3 x^2 - 2 x - a = 0] /\ [x^3 - x^2 - a x - 2 b + a - 2 = 0] /\ [3 y^2 - 2 y - a = 0] /\ [y^3 - y^2 - a y - a + 2 = 0] /\ [1 <= 4 a] /\ [4 a <= 7] /\ [-3 <= 4 b] /\ [4 b <= 3] /\ [-1 <= x] /\ [x <= 0] /\ [0 <= y] /\ [y <= 1]].
+
+#16: Solotareff B Grobner
+[Solotareff B Grobner from Buchberger-Hong]
+(b,a,x,y)
+2
+(E x)(E y)[[b^6 - 10/9 b^5 - 2915/243 b^4 - 6724/19683 b^3 + 830093/19683 b^2 + 286982/6561 b + 24299/2187 = 0] /\ [a - 537286851/1733427200 b^5 + 1274021541/1733427200 b^4 + 2556627057/866713600 b^3 - 3694037643/866713600 b^2 - 3091197667/346685440 b - 6499394527/1733427200 = 0] /\ [x + 1227687759/27734835200 b^5 - 897078969/27734835200 b^4 - 8587423413/13867417600 b^3 - 1285658313/13867417600 b^2 + 16457320943/5546967040 b + 42073006043/27734835200 = 0] /\ [y + 2835001539/13867417600 b^5 - 7132522149/13867417600 b^4 - 12643778673/6933708800 b^3 + 19121535627/6933708800 b^2 + 15435163363/2773483520 b + 9745294303/13867417600 = 0] /\ [1 <= 4 a] /\ [4 a <= 7] /\ [-3 <= 4 b] /\ [4 b <= 3] /\ [-1 <= x] /\ [x <= 0] /\ [0 <= y] /\ [y <= 1]].
+
+#17: Collision A
+[Collision A from Buchberger-Hong]
+(a,t,x,y)
+1
+(E t)(E x)(E y)[[1/4 (x - t)^2 + (y - 10)^2 - 1 = 0] /\ [1/4 (x - a t)^2 + (y - a t)^2 - 1 = 0] /\ [t > 0] /\ [a > 0]].
+
+#18: Collision A Grobner
+[Collision A Grobner from Buchberger-Hong]
+(a,t,x,y)
+1
+(E t)(E x)(E y)[[x^2 t^2 a^2 - 2/5 x^2 t^2 a + 1/5 x^2 t^2 - 16 x^2 t a + 80 x^2 - x t^3 a^3 - 3/5 x t^3 a^2 + 1/5 x t^3 a - 1/5 x t^3 + 16 x t^2 a^2 + 16 x t^2 a - 80 x t a - 80 x t + 5/4 t^4 a^4 + 3/10 t^4 a^2 + 1/20 t^4 - 40 t^3 a^3 - 8 t^3 a + 2584/5 t^2 a^2 + 40 t^2 - 3136 t a + 7680 = 0] /\ [y x a - y x + 1/2 y t - 5 y a - 1/8 x^2 t a^2 + 1/20 x^2 t a - 1/40 x^2 t + x^2 a + 1/8 x t^2 a^3 + 3/40 x t^2 a^2 - 1/40 x t^2 a + 1/40 x t^2 - 11/8 x t a^2 - 5/8 x t a - 5 x a + 5 x - 5/32 t^3 a^4 - 3/80 t^3 a^2 - 1/160 t^3 + 55/16 t^2 a^3 + 5/16 t^2 a - 271/10 t a^2 - 5/2 t + 121 a = 0] /\ [y x t - 10 y x - 1/2 y t^2 + 50 y + 5/4 x^2 t a - 1/4 x^2 t - 10 x^2 - 5/4 x t^2 a^2 - 11/8 x t^2 a + 1/8 x t^2 + 55/4 x t a + 25/4 x t + 50 x + 25/16 t^3 a^3 + 11/16 t^3 a - 275/8 t^2 a^2 - 25/8 t^2 + 271 t a - 1210 = 0] /\ [y t a - 10 y + 1/4 x t a - 1/4 x t - 5/8 t^2 a^2 + 1/8 t^2 + 50 = 0] /\ [y^2 - 20 y + 1/4 x^2 - 1/2 x t + 1/4 t^2 + 99 = 0] /\ [t > 0] /\ [a > 0]].
+
+#19: Collision B
+[Collision B from Buchberger-Hong]
+(a,y,x,t)
+1
+(E y)(E x)(E t)[[1/4 (x - t)^2 + (y - 10)^2 - 1 = 0] /\ [1/4 (x - a t)^2 + (y - a t)^2 - 1 = 0] /\ [t > 0] /\ [a > 0]].
+
+#20: Collision B Grobner
+[Collision B Grobner from Buchberger-Hong]
+(a,y,x,t)
+1
+(E y)(E x)(E t)[[ x^4 a^4 - 4/5 x^4 a^3 + 14/25 x^4 a^2 - 4/25 x^4 a + 1/25 x^4 - 16/5 x^3 y a^3 + 32/15 x^3 y a^2 - 16/25 x^3 y a + 8 x^2 y^2 a^4 - 16/5 x^2 y^2 a^3 + 16/5 x^2 y^2 a^2 - 16/25 x^2 y^2 a + 8/25 x^2 y^2 - 160 x^2 y a^4 + 64 x^2 y a^3 + 96/5 x^2 y a^2 + 792 x^2 a^4 - 1584/5 x^2 a^3 - 2416/25 x^2 a^2 + 16/25 x^2 a - 8/25 x^2 - 64/5 x y^3 a^3 + 128/25 x y^3 a^2 - 64/25 x y^3 a + 256 x y^2 a^3 - 512/5 x y^2 a^2 - 6336/5 x y a^3 + 12672/25 x y a^2 + 64/25 x y a + 16 y^4 a^4 + 96/25 y^4 a^2 + 16/25 y^4 - 640 y^3 a^4 - 384/5 y^3 a^2 + 9568 y^2 a^4 + 9664/25 y^2 a^2 - 32/25 y^2 - 63360 y a^4 - 128 y a^2 + 156816 a^4 + 3168/5 a^2 + 16/25 = 0] /\ [t y^2 a^5 - 2/5 t y^2 a^4 + 2/25 t y^2 a^2 - 1/25 t y^2 a - 20 t y a^5 + 8 t y a^4 - 4/5 t y a^3 + 99 t a^5 - 198/5 t a^4 + 104/25 t a^3 - 2/25 t a^2 + 1/125 t a + 1/8 x^3 a^5 - 1/8 x^3 a^4 + 9/100 x^3 a^3 - 17/500 x^3 a^2 + 9/1000 x^3 a - 1/1000 x^3 - 3/10 x^2 y a^4 + 4/25 x^2 y a^3 - 7/125 x^2 y a^2 + 1/250 x^2 y + 1/2 x y^2 a^5 - 1/2 x y^2 a^4 + 9/25 x y^2 a^3 - 17/125 x y^2 a^2 + 9/250 x y^2 a - 1/250 x y^2 - 10 x y a^5 + 10 x y a^4 - 6/5 x y a^3 - 2/25 x y a^2 + 99/2 x a^5 - 99/2 x a^4 + 141/25 x a^3 + 67/125 x a^2 - 9/250 x a + 1/250 x - 6/5 y^3 a^4 + 16/25 y^3 a^3 - 28/125 y^3 a^2 + 2/125 y^3 + 24 y^2 a^4 - 64/5 y^2 a^3 + 72/25 y^2 a^2 - 594/5 y a^4 + 1584/25 y a^3 - 1772/125 y a^2 - 2/125 y = 0] /\ [t x y a - 125/4 t y^2 a^4 + 25/4 t y^2 a^3 + 5/4 t y^2 a^2 - 9/4 t y^2 a + 625 t y a^4 - 125 t y a^3 - 12375/4 t a^4 + 2475/4 t a^3 - 25/4 t a^2 + 5/4 t a - 125/32 x^3 a^4 + 25/8 x^3 a^3 - 35/16 x^3 a^2 + 5/8 x^3 a - 5/32 x^3 + 75/8 x^2 y a^3 - 25/8 x^2 y a^2 + 5/8 x^2 y a + 1/8 x^2 y - 125/8 x y^2 a^4 + 25/2 x y^2 a^3 - 35/4 x y^2 a^2 + 5/2 x y^2 a - 5/8 x Y62 + 625/2 x y a^4 - 250 x y a^3 - 25/2 x y a^2 - 12375/8 x a^4 + 2475/2 x a^3 + 285/4 x a^2 - 5/2 x a + 5/8 x + 75/2 y^3 a^3 - 25/2 y^3 a^2 + 5/2 y^3 a + 1/2 y^3 - 750 y^2 a^3 + 250 y^2 a^2 + 7425/2 y a^3 - 2475/2 y a^2 - 5/2 y a - 1/2 y = 0] /\ [t x^2 - 375/2 t y^2 a^4 + 25/2 t y^2 a^3 - 25/2 t y^2 a^2 - 25/2 t y^2 a + 4 t y^2 + 3750 t y a^4 - 250 t y a^3 + 400 t y a^2 - 37125/2 t a^4 + 2475/2 t a^3 - 4035/2 t a^2 + 5/2 t a - 4 t - 375/16 x^3 a^4 + 125/8 x^3 a^3 - 55/4 x^3 a^2 + 31/8 x^3 a - 37/16 x^3 + 225/4 x^2 y a^3 - 45/4 x^2 y a^2 + 47/4 x^2 y a + 5/4 x^2 y - 375/4 x y^2 a^4 + 125/2 x y^2 a^3 - 55 x y^2 a^2 + 31/2 x y^2 a - 37/4 x y^2 + 1875 x y a^4 - 1250 x y a^3 - 25 x y a^2 - 160 x y a - 37125/4 x a^4 + 12375/2 x a^3 + 180 x a^2 + 1569/2 x a + 37/4 x + 225 y^3 a^3 - 45 y^3 a^2 + 47 y^3 a + 5 y^3 - 4500 y^2 a^3 + 900 y^2 a^2 - 640 y^2 a + 22275 y a^3 - 4455 y a^2 + 3153 y a - 5 y = 0] /\ [ t x a^2 - 1/5 t x a - 4/5 t y a - 1/2 x^2 a^2 + 1/10 x^2 - 2 y^2 a^2 + 2/5 y^2 + 40 y a^2 - 198 a^2 - 2/5 = 0] /\ [t^2 - 2 t x + x^2 + 4 y^2 - 80 y + 396 = 0] /\ [t > 0] /\ [a > 0]].
+
+#===================================================
+# Other Examples
+
+#1: Off-Center Ellipse
+[Off-Center Ellipse]
+(a,x,y)
+1
+(A x)(A y)[[a /= 0] /\ [[16 a^2 y^2 - 8 a^2 y + 4 x^2 - 4 x - 3 a^2 + 1 = 0] ==> [y^2 + x^2 - 1 <= 0]]].
+
+#2: Concentric Circles
+[Concentric Circles]
+(x,y)
+2
+[[x^2 + y^2 - 9 = 0] \/ [x^2 + y^2 - 1 = 0]].
+
+#3: Non-Concentric Circles
+[Non-Concentric Circles]
+(x,y)
+2
+[[x^2 + y^2 - 9 = 0] \/ [x^2 + (y - 1)^2 - 1 = 0]].
+
+#4: Edges Square Product
+[Edges Square Product]
+(x,y,a,b,c)
+2
+(E a)(E b)(E c)[[x = a b - c] /\ [y = a c + x + 2] /\ [0 <= a] /\ [a <= 2] /\ [2 <= b] /\ [b <= 4] /\ [-1 <= c] /\ [c <= 1] /\ [-1 <= x] /\ [x <= 9] /\ [-6 <= y] /\ [y <= 6]].
+
+#5: Simplified Edges Square Product
+[Simplified Edges Square Product]
+(x,y,a)
+2
+(E a)[[-a <= 0] /\ [a <= 2] /\ [0 <= 1 + x] /\ [x <= 9] /\ [0 <= y + 6] /\ [y <= 6] /\ [0 <= -(a^2 + 1) (-y - a x + 2 a^2 + 2)] /\ [((-x + a y) (a^2 + 1)) <= ((a^2 + 1)^2)] /\ [a^2 + 1 /= 0] /\ [0 <= (a^2 + 1) (a^2 + 1 - x + a y)] /\ [((a^2 + 1) (y + a x)) <= 4 (a^2 + 1)^2]].
+
+#6: Putnum Example
+[Putnum Example]
+(x,y,a,b,c,d)
+2
+(E a)(E b)(E c)(E d)[[a^2 + b^2 - 1 = 0] /\ [(c - 10)^2 + d^2 - 9 = 0] /\ [2 x = a + c] /\ [2 y = b + d]].
+
+#7: Simplified Putnum Example
+[Simplified Putnum Example]
+(x,y,a,d)
+2
+(E a)(E d)[[a^2 + 4 y^2 - 4 y d + d^2 - 1 = 0] /\ [4 x^2 - 4 x a - 40 x + a^2 + 20 a + 91 + d^2 = 0]].
+
+#8: YangXia
+[YangXia]
+(a,h,R,s,b,c)
+3
+(E s)(E b)(E c)[[a^2 h^2 - 4 s (s - a) (s - b) (s - c) = 0] /\ [2 R h - b c = 0] /\ [2 s - a - b - c = 0] /\ [b > 0] /\ [c > 0] /\ [R > 0] /\ [h > 0] /\ [a + b - c > 0] /\ [b + c - a > 0] /\ [c + a - b > 0]].
+
+#9: Simplified YangXia
+[Simplified YangXia]
+(R,h,a,b)
+3
+(E b)[[b /= 0] /\ [0 < R] /\ [0 < b] /\ [0 < h] /\ [4 a^2 h^2 b^4 - 2 a^2 b^6 - 8 a^2 R^2 h^2 b^2 - 8 R^2 h^2 b^4 + b^8 + a^4 b^4 + 16 R^4 h^4 = 0] /\ [0 < (a b + b^2 - 2 R h) b] /\ [0 < R h b] /\ [0 < (2 R h + a b - b^2) b] /\ [0 < (b^2 + 2 R h - a b) b]].
+
+#10: SEIT Model
+[SEIT Model]
+(b,c,d,q,r,u,v,s,F,J,T)
+7
+(E s)(E F)(E J)(E T)[[d - d s - b J s = 0] /\ [v F - (d + u) J = 0] /\ [b J + c J T - (d + v + r) F + (1 - q) u J = 0] /\ [-d T + r F + q u J - b^2 T J = 0] /\ [F > 0] /\ [J > 0] /\ [T > 0] /\ [s > 0] /\ [b > 0] /\ [d > 0] /\ [v > 0] /\ [r > 0] /\ [u > 0] /\ [q > 0] /\ [b > c]].
+
+#11: Simplified SEIT Model
+[Simplified SEIT Model]
+(b,d,v,c,u,q,r,J)
+7
+(E J)[[0 < d] /\ [0 < r] /\ [0 < u] /\ [0 < q] /\ [c < b] /\ [0 < v] /\ [0 < J] /\ [0 < b] /\ [0 < c] /\ [d + J b /= 0] /\ [-v /= 0] /\ [0 < (d + u) J v] /\ [v c /= 0] /\ [0 < d (d + J b)] /\ [0 < (d + J b) c v (-d v c + d^2 v + d^2 u + d v u q + d^3 + d^2 r + J b v u q + d u r + J b d v + J b d u + J b u r + J b d^2 + J b d r)] /\ [-(d + J b) c v^3 d (-d v b - J b v c + d^2 v + d^2 r + d v u q + d^3 + c J d^2 + d^2 u + d u r + c J d v + c J d u + J b d v + J b d r + J b v u q + J b d^2 + J^2 b d c + J b d u + J b u r + J^2 b c v + J^2 b u c) = 0]].
+
+#12: Cyclic-3
+[Cyclic-3]
+(c,b,a)
+1
+(E b)(E a)[[a + b + c = 0] /\ [a b + b c + c a = 0] /\ [a b c - 1 = 0]].
+
+#13: Cyclic-4
+[Cyclic-4]
+(d,c,b,a)
+1
+(E c)(E b)(E a)[[a + b + c + d = 0] /\ [a b + b c + c d + d a = 0] /\ [a b c + b c d + c d a + d a b = 0] /\ [a b c d - 1 = 0]].
+
+#15: Joukowsky Transformation
+[Joukowsky Transformation]
+(a,b,c,d)
+0
+(A a)(A b)(A c)(A d)[[[a (c^2 + d^2) (a^2 + b^2 + 1) - c (a^2 + b^2) (c^2 + d^2 + 1) = 0] /\ [b (c^2 + d^2) (a^2 + b^2 - 1) - d (a^2 + b^2) (c^2 + d^2 - 1) = 0] /\ [b d > 0] /\ [c^2 + d^2 - 1 > 0]] ==> [[a = c] /\ [b = d]]].
+
+
+
+#===================================================
+# Joukowsky Transformation
+
+#1: Joukowsky Transformation
+[Joukowsky Transformation]
+(a,b,c,d)
+0
+(A a)(A b)(A c)(A d)[[[a (c^2 + d^2) (a^2 + b^2 + 1) - c (a^2 + b^2) (c^2 + d^2 + 1) = 0] /\ [b (c^2 + d^2) (a^2 + b^2 - 1) - d (a^2 + b^2) (c^2 + d^2 - 1) = 0] /\ [b d > 0] /\ [c^2 + d^2 - 1 > 0]] ==> [[a = c] /\ [b = d]]].
+
+#2: Separate Clauses
+[Separate Clauses]
+(a,b,c,d)
+0
+(E a)(E b)(E c)(E d)[b^2 c d^2 + a^2 c d^2 - a b^2 d^2 - a^3 d^2 - a d^2 + b^2 c^3 + a^2 c^3 - a b^2 c^2 - a^3 c^2 - a c^2 + b^2 c + a^2 c = 0 /\ b^2 d^3 + a^2 d^3 - b^3 d^2 - a^2 b d^2 + b d^2 + b^2 c^2 d + a^2 c^2 d - b^2 d - a^2 d - b^3 c^2 - a^2 b c^2 + b c^2 = 0 /\ (d)(b) > 0 /\ d^2 + c^2 - 1 > 0 /\ c - a /= 0]].
+
+#3: Upper Half Plane
+[Upper Half Plane]
+(a,b,c,d)
+0
+(A a)(A b)(A c)(A d)[[[a (c^2 + d^2) (a^2 + b^2 + 1) - c (a^2 + b^2) (c^2 + d^2 + 1) = 0] /\ [b (c^2 + d^2) (a^2 + b^2 - 1) - d (a^2 + b^2) (c^2 + d^2 - 1) = 0] /\ [b > 0] /\ [d > 0]] ==> [[a = c] /\ [b = d]]].
+
+
+#===================================================
+# TTICAD Examples
+
+#1: Intersection \dagger A
+[Intersection \dagger A]
+(x,y,z)
+0
+[[x z+z y-2 x=0] \/ [[z^2-y=0] /\ [2 x^2-y^2-z^2<0]]].
+
+#2: Intersection \dagger B
+[Intersection \dagger B]
+(y,x,z)
+0
+[[x z+z y-2 x=0] \/ [[z^2-y=0] /\ [2 x^2-y^2-z^2<0]]].
+
+#3: Random \dagger A
+[Random \dagger A]
+(x,y,z)
+0
+[[16 x^2+4 x y^2-4 z+1=0] \/ [[4 x+2 y^2 z+1=0] /\ [2 x^2 z-x-2 y^2<0]]].
+
+#4: Random \dagger B
+[Random \dagger B]
+(y,x,z)
+0
+[[16 x^2+4 x y^2-4 z+1=0] \/ [[4 x+2 y^2 z+1=0] /\ [2 x^2 z-x-2 y^2<0]]].
+
+#5: Ellipse \dagger A
+[Ellipse \dagger A]
+(a,b,c,x,y)
+0
+[[x^2+y^2-1=0] \/ [[ b^2 x^2-2 b^2 x c+b^2 c^2+a^2 y^2-a^2 b^2=0] /\ [a>0] /\ [a-1< 0] /\ [b>0] /\ [b-1<0] /\ [c>0] /\ [c-1<0]]].
+
+#6: Ellipse \dagger B
+[Ellipse \dagger B]
+(a,b,c,y,x)
+0
+[[x^2+y^2-1=0] \/ [[ b^2 x^2-2 b^2 x c+b^2 c^2+a^2 y^2-a^2 b^2=0] /\ [a>0] /\ [a-1< 0] /\ [b>0] /\ [b-1<0] /\ [c>0] /\ [c-1<0]]].
+
+#7: Solotareff \dagger A
+[Solotareff \dagger A]
+(a,b,x,y)
+0
+[[[3 x^2-2 x-a=0] /\ [x^3-x^2-a x-2 b+a-2>0] /\ [4 a-1>0] /\ [4 a-7<0] /\ [x+1>0] /\ [x<0]] \/ [[3 y^2-2 y-a=0] /\ [y^3-y^2-a y-a+2>0] /\ [4 b+3>0] /\ [4 b-3<0] /\ [y>0] /\ [y-1<0]]].
+
+#8: Solotareff \dagger B
+[Solotareff \dagger B]
+(b,a,x,y)
+0
+[[[3 x^2-2 x-a=0] /\ [x^3-x^2-a x-2 b+a-2>0] /\ [4 a-1>0] /\ [4 a-7<0] /\ [x+1>0] /\ [x<0]] \/ [[3 y^2-2 y-a=0] /\ [y^3-y^2-a y-a+2>0] /\ [4 b+3>0] /\ [4 b-3<0] /\ [y>0] /\ [y-1<0]]].
+
+#9: Collision \dagger A
+[Collision \dagger A]
+(a,t,x,y)
+0
+[[[x^2-2 x t+t^2+4 y^2-80 y+396=0] /\ [t>0]] \/ [[x^2-2 x a t+5 a^2 t^2+4 y^2-8 y a t-4=0] /\ [a>0]]].
+
+#10: Collision \dagger B
+[Collision \dagger B]
+(a,y,x,t)
+0
+[[[x^2-2 x t+t^2+4 y^2-80 y+396=0] /\ [t>0]] \/ [[x^2-2 x a t+5 a^2 t^2+4 y^2-8 y a t-4=0] /\ [a>0]]].
+
+#11: Kahan A
+[Kahan A]
+(x,y)
+0
+[[[8 y^3 x+8 y x^3+20 y^3+84 y x^2+288 y x+324 y=0] /\ [-225 x^2-324 x+63 y^2-4 x^4-52 x^3+12 y^2 x+4 y^4<0]] \/ [[2 y=0] /\ [2 x+9<0]] \/ [[8 y=0] /\ [8 x^2+56 x+8 y^2+96<0]] \/ [[y=0] /\ [x^2+7 x+y^2+12<0]] \/ [[8 y^3 x+8 y x^3+20 y^3+84 y x^2+288 y x+324 y=0] /\ [-4 x^4-52 x^3-252 x^2+12 y^2 x-540 x+36 y^2+4 y^4-432<=0] /\ [4 x^4+52 x^3+225 x^2-12 y^2 x+324 x-63 y^2-4 y^4<0]] \/ [[2 y=0] /\ [-2 x-6<0] /\[2 x<=]] \/ [[8 y=0] /\ [-8 x^2-56 x-8 y^2-96<0] /\ [2 x^2+8 x+2 y^2<=0]]].
+
+#12: Kahan B
+[Kahan B]
+(y,x)
+0
+[[[8 y^3 x+8 y x^3+20 y^3+84 y x^2+288 y x+324 y=0] /\ [-225 x^2-324 x+63 y^2-4 x^4-52 x^3+12 y^2 x+4 y^4<0]] \/ [[2 y=0] /\ [2 x+9<0]] \/ [[8 y=0] /\ [8 x^2+56 x+8 y^2+96<0]] \/ [[y=0] /\ [x^2+7 x+y^2+12<0]] \/ [[8 y^3 x+8 y x^3+20 y^3+84 y x^2+288 y x+324 y=0] /\ [-4 x^4-52 x^3-252 x^2+12 y^2 x-540 x+36 y^2+4 y^4-432<=0] /\ [4 x^4+52 x^3+225 x^2-12 y^2 x+324 x-63 y^2-4 y^4<0]] \/ [[2 y=0] /\ [-2 x-6<0] /\[2 x<=]] \/ [[8 y=0] /\ [-8 x^2-56 x-8 y^2-96<0] /\ [2 x^2+8 x+2 y^2<=0]]].
+
+#13: ArcSin A 
+[ArcSin A]
+(x,y)
+0
+[[[-2 x y=0] /\ [y^2-x^2+1<0]] \/ [[16 y^3 x-16 y x^3+8 y x=0] /\ [1-4 x^2+4 y^2+4 x^4-24 x^2 y^2+4 y^4<=0]] \/ [[y=0] /\ [1-x<=0]] \/ [[y=0] /\ [x+1<=0]]].
+
+#14: ArcSin B 
+[ArcSin B]
+(y,x)
+0
+[[[-2 x y=0] /\ [y^2-x^2+1<0]] \/ [[16 y^3 x-16 y x^3+8 y x=0] /\ [1-4 x^2+4 y^2+4 x^4-24 x^2 y^2+4 y^4<=0]] \/ [[y=0] /\ [1-x<=0]] \/ [[y=0] /\ [x+1<=0]]].
+
+#15: 2D Example A
+[2D Example A]
+(x,y)
+0
+[[[x^2+y^2-1=0] /\ [4 x y-1<0]] \/ [[x^2-8 x+16+y^2-2 y=0] /\ [4 x y-4 x-17<0]]].
+
+#16: 2D Example B
+[2D Example B]
+(y,x)
+0
+[[[x^2+y^2-1=0] /\ [4 x y-1<0]] \/ [[x^2-8 x+16+y^2-2 y=0] /\ [4 x y-4 x-17<0]]].
+
+#17: 3D Example A
+[3D Example A]
+(x,y,z)
+0
+[[[x^2+y^2+z^2-1=0] /\ [4 x y z-1<0]] \/ [[x^2-8 x+y^2-2 y+z^2-4 z+20=0] /\ [4 y x z-8 y x-4 x z+8 x-16 y z+32 y+16 z-33<0]]].
+
+#18: 3D Example B
+[3D Example B]
+(y,x,z)
+0
+[[[x^2+y^2+z^2-1=0] /\ [4 x y z-1<0]] \/ [[x^2-8 x+y^2-2 y+z^2-4 z+20=0] /\ [4 y x z-8 y x-4 x z+8 x-16 y z+32 y+16 z-33<0]]].

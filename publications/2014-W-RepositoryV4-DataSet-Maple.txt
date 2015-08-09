@@ -1,0 +1,1016 @@
+#===================================================
+#
+#  Examples for CAD - Maple File
+#   Use the command:
+#   > read(`PATH/examplebank.txt`):
+#   to load the file (where PATH is the directory
+#   the file is saved in).
+#
+#  Version 4.0 - 1/4/13
+#===================================================
+
+print(`Cylindrical Algebraic Decomposition Example Bank`):
+print(` ~~~~ `):
+print(`Maintained by David Wilson, University of Bath`):
+print(` D.J.Wilson@bath.ac.uk `):
+print(`Run Help() for more information`):
+
+Help:=proc():
+print(`Package contains the following procedures:`):
+print(`CMXYExamples, CMXYExamplesInfo`):
+print(`BranchExamples, BranchExamplesInfo`):
+print(`MotionExamples, MotionExamplesInfo`):
+print(`BHExamples, BHExamplesInfo`):
+print(`OtherExamples, OtherExamplesInfo`):
+print(`JoukowskyTransformation, JoukowksyTransformationInfo`):
+print(`TTICADExamples, TTICADExamplesInfo`):
+print(` ~~~~ `):
+print(`To get a list of examples in each procedure run the "Info" proc`):
+print(`with no input, e.g. CMXYExamplesInfo()`):
+print(`To get further information on an example run the "Info" proc`):
+print(`with the appropriate input n, e.g. CMXYExamplesInfo(9)`):
+
+end:
+
+
+#===================================================
+# CMXY09 Examples
+# Examples sourced from "Computing Cylindrical Alg-
+# -ebraic Decomposition via Triangular Decomposition"
+
+
+
+CMXYExamples:=proc(n) local L:
+
+L:=[
+#1: Parametric Parabola
+[[a*x^2+b*x+c],[x,c,b,a]],
+#2: Whitney Umbrella
+[[x-u*v,y-v,z-u^2],[v,u,z,y,x]],
+#3: Quartic
+[[x^4+p*x^2+q*x+r],[x,p,q,r]],
+#4: Sphere and Catastrophe
+[[z^2+y^2+x^2-1,z^3+x*z+y],[x,y,z]],
+#5: Anron-84
+[[y^4-2*y^3+y^2-3*x^2*y+2*x^4],[y,x]],
+#6: Arnon-84-2
+[[144*y^2+96*x^2*y+9*x^4+105*x^2+70*x-98,x*y^2+6*x*y+x^3+9*x],[y,x]],
+#7: A real implicitization problem
+[[x-u*v,y-u*v^2,z-u^2],[v,u,z,y,x]],
+#8: Ball and Circular Cylinder
+[[x^2+y^2+z^2-1,x^2+(y+z-2)^2-1],[z,y,x]],
+#9: Termination of term rewrite system
+[[x-r,y-r,x^2*(1+2*y)^2-y^2*(1+2*x^2)],[y,x,r]],
+#10: Collins and Johnson
+[[3*a^2*r+3*b^2-2*a*r-a^2-b^2,3*a^2*r+3*b^2*r-4*a*r+r-2*a^2-2*b^2+2*a,a-1/2,b,r,r-1],[r,a,b]],
+#11: Range of lower bounds
+[[a,a*z^2+b*z+c,a*x^2+b*x+c-y],[z,c,b,a,x,y]],
+#12: X-axis ellipse problem
+[[b^2*(x-c)^2+a^2*y^2-a^2*b^2,x^2+y^2-1],[y,x,b,c,a]],
+#13: Davenport and Heintz
+[[a-d,b-c,a-c,b-1,a^2-b],[a,b,c,d]],
+#14: Hong-90
+[[r+s+t,r*s+s*t+t*r-a,r*s*t-b],[b,a,t,s,r]],
+#15: Solotareff-3
+[[r,r-1,u+1,u-v,v-1,3*u^2+2*r*u-a,3*v^2+2*r*v-a,u^3+r*u^2-a*u+a-r-1,v^3+r*v^2-a*v-2*b-a+r+1],[v,u,b,r,a]],
+#16: Collision Problem
+[[17*t/16-6,17*t/16-10,x-17*t/16+1,x-17*t/16-1,y-17*t/16+9,y-17*t/16+7,(x-t)^2+y^2-1],[t,x,y]],
+#17: McCallum Trivariate Random Polynomial
+[[(y-1)*z^4+x*z^3+x*(1-y)*z^2+(y-x-1)*z+y],[z,y,x]],
+#18: Ellipse Problem
+[[b^2*(x-c)^2+a^2*(y-d)^2-a^2*b^2,a,b,x^2+y^2-1],[y,x,d,c,b,a]]
+]:
+
+if n<=0 or n>nops(L) then
+  ERROR("Out of range"):
+fi:
+
+
+RETURN(op(L[n])):
+
+end:
+
+
+
+CMXYExamplesInfo:=proc() local L:
+
+if args=NULL then
+print(`Output for CMXYExamples(n) and CMXYExamplesInfo(n)`):
+print(`n=1: Parametric parabola`):
+print(`n=2: Whitney Umbrella`):
+print(`n=3: Quartic`):
+print(`n=4: Sphere and Catastrophe`):
+print(`n=5: Arnon-84`):
+print(`n=6: Arnon-84-2`):
+print(`n=7: A real implicitization problem`):
+print(`n=8: Ball and circular cylinder`):
+print(`n=9: Termination of term rewrite system`):
+print(`n=10: Collins and Johnson`):
+print(`n=11: Range of lower bounds`):
+print(`n=12: X-axis ellipse problem`):
+print(`n=13: Davenport and Heintz`):
+print(`n=14: Hong-90`):
+print(`n=15: Solotareff-3`): 
+print(`n=16: Collision problem`):
+print(`n=17: McCallum trivariate random polynomial`):
+print(`n=18: Ellipse problem`):
+
+
+elif nargs=1 and args[1]=1 then
+
+print(`#1: Parametric Parabola`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=2 then
+
+print(`#2: Whitney Umbrella`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=3 then
+
+print(`#3: Quartic`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=4 then
+
+print(`#4: Sphere and Catastrophe`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=5 then
+
+print(`#5: Arnon-84`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=6 then
+
+print(`#6: Arnon-84-2`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=7 then
+
+print(`#7: A real implicitization problem`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=8 then
+
+print(`#8: Ball and circular cylinder`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=9 then
+
+print(`#9: Termination of term rewrite system`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=10 then
+
+print(`#10: Collins and Johnson`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=11 then
+
+print(`#11: Range of lower bounds`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=12 then
+
+print(`#12: X-axis ellipse problem`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=13 then
+
+print(`#13: Davenport and Heintz`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=14 then
+
+print(`#14: Hong-90`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=15 then
+
+print(`#15: Solotareff-3`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=16 then
+
+print(`#16: Collision problem`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=17 then
+
+print(`#17: McCallum trivariate random polynomial`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=18 then
+
+print(`#18: Ellipse problem`):
+print(`Equations:`):
+print(CMXYExamples(args[1])[1]):
+print(`Variables:`):
+print(CMXYExamples(args[1])[2]):
+
+else
+
+print(`No such example`):
+
+fi:
+
+end:
+
+
+
+
+
+#===================================================
+# Branch Cut Examples
+# Examples from using CAD to deal with branch cuts
+
+BranchExamples:=proc(n) local L:
+
+
+L:=[
+# Kahan A
+[[4*y*(2*y^2*x+2*x^3+5*y^2+21*x^2+72*x+81),-225*x^2-324*x+63*y^2-4*x^4-52*x^3+12*y^2*x+4*y^4,2*y,2*x+9,8*y,8*x^2+56*x+8*y^2+96,y,x^2+7*x+y^2+12,4*y*(2*y^2*x+2*x^3+5*y^2+21*x^2+72*x+81),-4*x^4-52*x^3-252*x^2+12*y^2*x-540*x+36*y^2+4*y^4-432, 4*x^4+52*x^3+225*x^2-12*y^2*x+324*x-63*y^2-4*y^4,2*y,-2*x-6, 2*x,8*y,-8*x^2-56*x-8*y^2-96, 2*x^2+8*x+2
+*y^2],[y,x]],
+# Kahan B
+[[4*y*(2*y^2*x+2*x^3+5*y^2+21*x^2+72*x+81),-225*x^2-324*x+63*y^2-4*x^4-52*x^3+12*y^2*x+4*y^4,2*y,2*x+9,8*y,8*x^2+56*x+8*y^2+96,y,x^2+7*x+y^2+12,4*y*(2*y^2*x+2*x^3+5*y^2+21*x^2+72*x+81),-4*x^4-52*x^3-252*x^2+12*y^2*x-540*x+36*y^2+4*y^4-432, 4*x^4+52*x^3+225*x^2-12*y^2*x+324*x-63*y^2-4*y^4,2*y,-2*x-6, 2*x,8*y,-8*x^2-56*x-8*y^2-96, 2*x^2+8*x+2
+*y^2],[x,y]],
+# ArcSin A
+[[-2*x*y,y^2-x^2+1, -8*x*y*(2*x^2-2*y^2-1), 1-4*x^2+4*y^2+4*x^4-24*x^2*y^2+4*y^4, y, 1-x, y, x+1],[y,x]],
+# ArcSin B
+[[-2*x*y,y^2-x^2+1, -8*x*y*(2*x^2-2*y^2-1), 1-4*x^2+4*y^2+4*x^4-24*x^2*y^2+4*y^4, y, 1-x, y, x+1],[x,y]]
+]:
+
+
+if n<=0 or n>nops(L) then
+  ERROR("Out of range"):
+fi:
+
+
+RETURN(op(L[n])):
+
+end:
+
+
+BranchExamplesInfo:=proc() local L:
+
+if args=NULL then
+print(`Output for BranchExamples(n) and BranchExamplesInfo(n)`):
+print(`n=1: Kahan A`):
+print(`n=2: Kahan B`):
+print(`n=3: ArcSin A`):
+print(`n=4: ArcSin B`):
+
+elif nargs=1 and args[1]=1 then
+
+print(`#1: Kahan A`):
+print(`Equations:`):
+print(BranchExamples(args[1])[1]):
+print(`Variables:`):
+print(BranchExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=2 then
+
+print(`#2: Kahan B`):
+print(`Equations:`):
+print(BranchExamples(args[1])[1]):
+print(`Variables:`):
+print(BranchExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=3 then
+
+print(`#3: ArcSin A`):
+print(`Equations:`):
+print(BranchExamples(args[1])[1]):
+print(`Variables:`):
+print(BranchExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=2 then
+
+print(`#4: ArcSin B`):
+print(`Equations:`):
+print(BranchExamples(args[1])[1]):
+print(`Variables:`):
+print(BranchExamples(args[1])[2]):
+
+
+else
+
+print(`No such example`):
+
+fi:
+
+end:
+
+#===================================================
+# Motion Planning Examples
+# Examples from using CAD to solve problems in robot
+# motion planning
+
+MotionExamples:=proc(n) local L:
+
+
+L:=[
+[[(x-a)^2+(y-b)^2-9,y*b,x*(y-b)^2+y*(a-x)*(y-b),(y-1)*(b-1),(x+1)*(y-b)^2+(y-1)*(a-x)*(y-b),x*a,y*(x-a)^2+x*(b-y)*(x-a),(x+1)*(a+1),(y-1)*(x-a)^2+(x+1)*(b-y)*(x-a)],[x,y,a,b]]
+]:
+
+
+if n<=0 or n>nops(L) then
+  ERROR("Out of range"):
+fi:
+
+
+RETURN(op(L[n])):
+
+end:
+
+
+MotionExamplesInfo:=proc() local L:
+
+if args=NULL then
+print(`Output for MotionExamples(n) and MotionExamplesInfo(n)`):
+print(`n=1: Piano Mover's Problem (Davenport)`):
+
+elif nargs=1 and args[1]=1 then
+
+print(`#1: Piano Mover's Problem (Davenport)`):
+print(`Equations:`):
+print(MotionExamples(args[1])[1]):
+print(`Variables:`):
+print(MotionExamples(args[1])[2]):
+
+else
+
+print(`No such example`):
+
+fi:
+
+end:
+
+
+#===================================================
+# Buchberger-Hong Examples
+BHExamples:=proc(n) local L:
+
+L:=[
+[[x^2-(1/2)*(y^2)-(1/2)*z^2,x*z+z*y-2*x,z^2-y],[z,y,x]],
+[[x^2-(1/2)*(y^2)-(1/2)*z^2,x*z+z*y-2*x,z^2-y],[z,x,y]],
+[[4*x^2+x*y^2-z+(1/4),2*x+y^2*z+(1/2),x^2*z-(1/2)*x-y^2],[z,y,x]],
+[[4*x^2+x*y^2-z+(1/4),2*x+y^2*z+(1/2),x^2*z-(1/2)*x-y^2],[x,y,z]],
+[[x^2+y^2-1,b^2*(x-c)^2+a^2*y^2-a^2*b^2,a,a-1,b,b-1,c,c-1],[y,x,c,b,a]],
+[[x^2+y^2-1,b^2*(x-c)^2+a^2*y^2-a^2*b^2,a,a-1,b,b-1,c,c-1],[x,y,c,b,a]],
+[[3*x^2-2*x-a,x^3-x^2-a*x-2*b+a-2,3*y^2-2*y-a,y^3-y^2-a*y-a+2,4*a-1,4*a-7,4*b+3,4*b-3,x+1,x,y,y-1],[y,x,b,a]],
+[[3*x^2-2*x-a,x^3-x^2-a*x-2*b+a-2,3*y^2-2*y-a,y^3-y^2-a*y-a+2,4*a-1,4*a-7,4*b+3,4*b-3,x+1,x,y,y-1],[y,x,a,b]],
+[[(1/4)*(x-t)^2+(y-10)^2-1,(1/4)*(x-a*t)^2+(y-a*t)^2-1,t,a],[y,x,t,a]],
+[[(1/4)*(x-t)^2+(y-10)^2-1,(1/4)*(x-a*t)^2+(y-a*t)^2-1,t,a],[t,x,y,a]]
+]:
+
+if n<=0 or n>nops(L) then
+  ERROR("Out of range"):
+fi:
+
+RETURN(op(L[n])):
+
+end:
+
+BHExamplesInfo:=proc()
+
+if args=NULL then
+ print(`Output for BHExamples(n) and BHExamplesInfo(n)`):
+ print(`n=1: Intersection A`):
+ print(`n=2: Intersection B`):
+ print(`n=3: Random A`):
+ print(`n=4: Random B`):
+ print(`n=5: Ellipse A`):
+ print(`n=6: Ellipse B`):
+ print(`n=7: Solotareff A`):
+ print(`n=8: Solotareff B`):
+ print(`n=9: Collision A`):
+ print(`n=10: Collision B`):
+
+elif nargs=1 and args[1]=1 then
+
+print(`#1: Intersection A`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=2 then
+
+print(`#2: Intersection B`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=3 then
+
+print(`#3: Random A`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=4 then
+
+print(`#4: Random B`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=5 then
+
+print(`#5: Ellipse A`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=6 then
+
+print(`#6: Ellipse B`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=7 then
+
+print(`#7: Solotareff A`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=8 then
+
+print(`#8: Solotareff B`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=9 then
+
+print(`#9: Collision A`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=10 then
+
+print(`#10: Collision B`):
+print(`Equations:`):
+print(BHExamples(args[1])[1]):
+print(`Variables:`):
+print(BHExamples(args[1])[2]):
+
+fi:
+
+end:
+
+
+#===================================================
+# Other Examples
+
+
+OtherExamples:=proc(n) local L:
+
+
+L:=[
+#1: Off-Center Ellipse
+[[a,16*a^2*y^2-8*a^2*y+4*x^2-4*x-3*a^2+1,y^2+x^2-1],[y,x,a]],
+#2: Concentric Circles
+[[x^2+y^2-9,x^2+y^2-1],[y,x]],
+#3: Non-Concentric Circles
+[[x^2+y^2-9,x^2+(y-1)^2-1],[y,x]],
+#4: Edges Square Product
+[[x-a*b+c,y-a*c-x-2,a,2-a,b-2,4-b,c+1,1-c,x+1,9-x,y+6,6-y],[c,b,a,y,x]],
+#5: Simplified Edges Square Product
+[[x-1,2-a,1+x,9-x,y+6,6-y,-(a^2+1)*(-y-a*x+2*a^2+2),(a^2+1)^2-(-x+a*y)*(a^2+1),a^2+1,(a^2+1)*(a^2+1-x+a*y),4*(a^2+1)^2-(a^2+1)*(y+a*x)],[a,y,x]],
+#6: Putnum Example
+[[a^2+b^2-1,(c-10)^2+d^2-9,2*x-(a+c),2+y-(b+d)],[d,c,b,a,y,x]],
+#7: Simplified Putnum Example
+[[a^2+4*y^2-4*y*d+d^2-1,4*x^2-4*x*a-40*x+a^2+20*a+91+d^2],[d,a,y,x]],
+#8: YangXia
+[[a^2*h^2-4*s*(s-a)*(s-b)*(s-c),2*R*h-b*c,2*s-a-b-c,b,c,R,h,a+b-c,b+c-a,c+a-b],[c,b,s,R,h,a]],
+#9: Simplified YangXia
+[[-(1/2)*b,R,b,h,(1/16)*a^2*h^2*b^4-(1/32)*a^2*b^6-(1/8)*a^2*R^2*h^2*b^2-(1/8)*R^2*h^2*b^4+(1/64)*b^8+(1/64)*a^4*b^4+(1/4)*R^4*h^4,-(1/4)*(-a*b-b^2+2*R*h)*b,(1/2)*R*h*b,(1/4)*(2*R*h+a*b-b^2)*b,(1/4)*(b^2+2*R*h-a*b)*b],[b,a,h,R]],
+#10: SEIT Model
+[[d-d*s-b*J*s,v*F-(d+t)*J,b*J+c*J*T-(d+v+r)*F+(1-q)*t*J,-d*T+r*F+q*t*J-b^2*T*J,F,J,T,s,b,d,v,r,t,q,b-c],[T,J,F,s,v,t,r,q,d,c,b]],
+#11: Simplified SEIT Model
+[[d,r,t,q,b-c,v,J,b,c,d+J*b,-v,(d+t)*J*v,v*c,d*(d+J*b),(d+J*b)*c*v*(-d*v*b+d^2*v+d^2*t+d*v*t*q+d^3+d^2*r+J*b*v*t*q+d*t*r+J*b*d*v+J*b*d*t+J*b*t*v+J*b*d^2+J*b*d*r),
+-(d+J*b)*c*v^3*d*(-d*v*b-J*b*v*c+d^2*v+d^2*r+d*v*t*q + d^3 + c*J*d^2+d^2*t+d*t*r+c*J*d*v+c*J*d*t+J*b*d*v+J*b*d*r + J*b*v*t*q + J*b*d^2+J^2*b*d*c+J*b*d*t+J*b*t*r+J^2*b*c*v+J^2*b*t*c)],[J,v,t,r,q,d,c,b]],
+#12: Cyclic-3
+[[a+b+c,a*b+b*c+c*a,a*b*c-1],[a,b,c]],
+#13: Cyclic-4
+[[a+b+c+d,a*b+b*c+c*d+d*a,a*b*c+b*c*d+c*d*a+d*a*b,a*b*c*d-1],[a,b,c,d]],
+#14: Joukowsky Transformation
+[[a*(c^2+d^2)*(a^2+b^2+1)-c*(a^2+b^2)*(c^2+d^2+1),b*(c^2+d^2)*(a^2+b^2-1)-d*(a^2+b^2)*(c^2+d^2-1),b*d,c^2+d^2-1,a-c,b-d],[d,c,b,a]]
+]:
+
+
+if n<=0 or n>nops(L) then
+  ERROR("Out of range"):
+fi:
+
+
+RETURN(op(L[n])):
+
+end:
+
+
+OtherExamplesInfo:=proc() local L:
+
+if args=NULL then
+print(`Output for OtherExamples(n) and OtherExamplesInfo(n)`):
+print(`n=1: Off-Center Ellipse`):
+print(`n=2: Concentric Circles`):
+print(`n=3: Non-Concentric Circles`):
+print(`n=4: Edges Square Product`):
+print(`n=5: Simplified Edges Square Product`):
+print(`n=6: Putnum Example`):
+print(`n=7: Simplified Putnum Example`):
+print(`n=8: YangXia`):
+print(`n=9: Simplified YangXia`):
+print(`n=10: SEIT Model`):
+print(`n=11: Simplified SEIT Model`):
+print(`n=12: Cyclic-3`):
+print(`n=13: Cyclic-4`):
+print(`n=14: Joukowsky Transformation`):
+
+elif nargs=1 and args[1]=1 then
+
+print(`#1: Off-Center Ellipse`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=2 then
+
+print(`#2: Concentric Circles`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=3 then
+
+print(`#3: Non-Concentric Circles`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=4 then
+
+print(`#4: Edges Square Product`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=5 then
+
+print(`#5: Simplified Edges Square Product`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=6 then
+
+print(`#6: Putnum Example`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=7 then
+
+print(`#7: Simplified Putnum Example`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=8 then
+
+print(`#8: YangXia`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=9 then
+
+print(`#9: Simplified YangXia`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=10 then
+
+print(`#10: SEIT Model`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=11 then
+
+print(`#11: Simplified SEIT Model`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=12 then
+
+print(`#12: Cyclic-3`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=13 then
+
+print(`#13: Cyclic-4`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=14 then
+
+print(`#14: Joukowsky Transformation`):
+print(`Equations:`):
+print(OtherExamples(args[1])[1]):
+print(`Variables:`):
+print(OtherExamples(args[1])[2]):
+
+else
+
+print(`No such example`):
+
+fi:
+
+end:
+
+
+#===================================================
+# Joukowsky Transformation
+
+
+JoukowskyTransformation:=proc(n) local L:
+
+
+L:=[
+#1: Joukowsky Transformation
+[[a*(c^2+d^2)*(a^2+b^2+1)-c*(a^2+b^2)*(c^2+d^2+1),b*(c^2+d^2)*(a^2+b^2-1)-d*(a^2+b^2)*(c^2+d^2-1),b*d,c^2+d^2-1,a-c,b-d],[d,c,b,a]],
+#2: Separate Clauses
+[[a*(c^2+d^2)*(a^2+b^2+1)-c*(a^2+b^2)*(c^2+d^2+1),b*(c^2+d^2)*(a^2+b^2-1)-d*(a^2+b^2)*(c^2+d^2-1),b*d,c^2+d^2-1,a-c],[d,c,b,a]],
+#3: Upper Half Plane
+[[a*(c^2+d^2)*(a^2+b^2+1)-c*(a^2+b^2)*(c^2+d^2+1),b*(c^2+d^2)*(a^2+b^2-1)-d*(a^2+b^2)*(c^2+d^2-1),b,d,a-c,b-d],[d,c,b,a]]
+
+]:
+
+
+if n<=0 or n>nops(L) then
+  ERROR("Out of range"):
+fi:
+
+
+RETURN(op(L[n])):
+
+end:
+
+
+JoukowskyTransformationInfo:=proc() local L:
+
+if args=NULL then
+print(`Output for OtherExamples(n) and OtherExamplesInfo(n)`):
+print(`n=1: Joukowsky Transformation`):
+print(`n=2: Separate Clauses`):
+print(`n=3: Upper Half Plane`):
+
+elif nargs=1 and args[1]=1 then
+
+print(`#1: Joukowsky Transformation`):
+print(`Equations:`):
+print(JoukowskyTransformation(args[1])[1]):
+print(`Variables:`):
+print(JoukowskyTransformation(args[1])[2]):
+
+elif nargs=1 and args[1]=2 then
+
+print(`#2: Separate Clauses`):
+print(`Equations:`):
+print(JoukowskyTransformation(args[1])[1]):
+print(`Variables:`):
+print(JoukowskyTransformation(args[1])[2]):
+
+elif nargs=1 and args[1]=3 then
+
+print(`#3: Upper Half Plane`):
+print(`Equations:`):
+print(JoukowskyTransformation(args[1])[1]):
+print(`Variables:`):
+print(JoukowskyTransformation(args[1])[2]):
+
+else
+
+print(`No such example`):
+
+fi:
+
+end:
+
+
+#===================================================
+# TTICAD Examples
+
+
+TTICADExamples:=proc(n) local L:
+
+
+L:=[
+#1: Intersection \dagger A
+[[x*z+z*y-2*x,z^2-y,2*x^2-y^2-z^2],[z,y,x]],
+#2: Intersection \dagger B
+[[x*z+z*y-2*x,z^2-y,2*x^2-y^2-z^2],[z,x,y]],
+#3: Random \dagger A
+[[16*x^2+4*x*y^2-4*z+1,4*x+2*y^2*z+1,2*x^2*z-x-2*y^2],[z,y,x]],
+#4: Random \dagger B
+[[16*x^2+4*x*y^2-4*z+1,4*x+2*y^2*z+1,2*x^2*z-x-2*y^2],[z,x,y]],
+#5: Ellipse \dagger A
+[[x^2+y^2-1,b^2*x^2-2*b^2*x*c+b^2*c^2+a^2*y^2-a^2*b^2,a,a-1,b,b-1,c,c-1],[y,x,c,b,a]],
+#6: Ellipse \dagger B
+[[x^2+y^2-1,b^2*x^2-2*b^2*x*c+b^2*c^2+a^2*y^2-a^2*b^2,a,a-1,b,b-1,c,c-1],[x,y,c,b,a]],
+#7: Solotareff \dagger A
+[[3*x^2-2*x-a,x^3-x^2-a*x-2*b+a-2,4*a-1,4*a-7,x+1,x,3*y^2-2*y-a,y^3-y^2-a*y-a+2,4*b+3,4*b-3,y,y-1],[y,x,b,a]],
+#8: Solotareff \dagger B
+[[3*x^2-2*x-a,x^3-x^2-a*x-2*b+a-2,4*a-1,4*a-7,x+1,x,3*y^2-2*y-a,y^3-y^2-a*y-a+2,4*b+3,4*b-3,y,y-1],[y,x,a,b]],
+#9: Collision \dagger A
+[[x^2-2*x*t+t^2+4*y^2-80*y+396,t,x^2-2*x*a*t+5*a^2*t^2+4*y^2-8*y*a*t-4,a],[y,x,t,a]],
+#10: Collision \dagger B
+[[x^2-2*x*t+t^2+4*y^2-80*y+396,t,x^2-2*x*a*t+5*a^2*t^2+4*y^2-8*y*a*t-4,a],[t,x,y,a]],
+#11: Kahan A
+[[8*y^3*x+8*y*x^3+20*y^3+84*y*x^2+288*y*x+324*y,-225*x^2-324*x+63*y^2-4*x^4-52*x^3+12*y^2*x+4*y^4,2*y,2*x+9,8*y,8*x^2+56*x+8*y^2+96,y,x^2+7*x+y^2+12,8*y^3*x+8*y*x^3+20*y^3+84*y*x^2+288*y*x+324*y,-4*x^4-52*x^3-252*x^2+12*y^2*x-540*x+36*y^2+4*y^4-432,4*x^4+52*x^3+225*x^2-12*y^2*x+324*x-63*y^2-4*y^4,2*y,-2*x-6,2*x,8*y,-8*x^2-56*x-8*y^2-96,2*x^2+8*x+2*y^2],[y,x]],
+#12: Kahan B
+[[8*y^3*x+8*y*x^3+20*y^3+84*y*x^2+288*y*x+324*y,-225*x^2-324*x+63*y^2-4*x^4-52*x^3+12*y^2*x+4*y^4,2*y,2*x+9,8*y,8*x^2+56*x+8*y^2+96,y,x^2+7*x+y^2+12,8*y^3*x+8*y*x^3+20*y^3+84*y*x^2+288*y*x+324*y,-4*x^4-52*x^3-252*x^2+12*y^2*x-540*x+36*y^2+4*y^4-432,4*x^4+52*x^3+225*x^2-12*y^2*x+324*x-63*y^2-4*y^4,2*y,-2*x-6,2*x,8*y,-8*x^2-56*x-8*y^2-96,2*x^2+8*x+2*y^2],[x,y]],
+#13: ArcSin A
+[[-2*x*y,y^2-x^2+1,16*y^3*x-16*y*x^3+8*y*x,1-4*x^2+4*y^2+4*x^4-24*x^2*y^2+4*y^4,y,1-x,y,x+1],[y,x]],
+#14: ArcSin B
+[[-2*x*y,y^2-x^2+1,16*y^3*x-16*y*x^3+8*y*x,1-4*x^2+4*y^2+4*x^4-24*x^2*y^2+4*y^4,y,1-x,y,x+1],[x,y]],
+#15: 2D Example A
+[[x^2+y^2-1,4*x*y-1,x^2-8*x+16+y^2-2*y,4*x*y-4*x-17],[y,x]],
+#16: 2D Example B
+[[x^2+y^2-1,4*x*y-1,x^2-8*x+16+y^2-2*y,4*x*y-4*x-17],[x,y]],
+#17: 3D Example A
+[[x^2+y^2+z^2-1,4*x*y*z-1,x^2-8*x+y^2-2*y+z^2-4*z+20,4*y*x*z-8*y*x-4*x*z+8*x-16*y*z+32*y+16*z-33],[z,y,x]],
+#18: 3D Example B
+[[x^2+y^2+z^2-1,4*x*y*z-1,x^2-8*x+y^2-2*y+z^2-4*z+20,4*y*x*z-8*y*x-4*x*z+8*x-16*y*z+32*y+16*z-33],[z,x,y]]
+]:
+
+
+if n<=0 or n>nops(L) then
+  ERROR("Out of range"):
+fi:
+
+
+RETURN(op(L[n])):
+
+end:
+
+TTICADExamplesInfo:=proc() local L:
+
+if args=NULL then
+print(`Output for TTICADExamples(n) and TTICADExamplesInfo(n)`):
+print(`n=1: Intersection \dagger A`):
+print(`n=2: Intersection \dagger B`):
+print(`n=3: Random \dagger A`):
+print(`n=4: Random \dagger B`):
+print(`n=5: Ellipse \dagger A`):
+print(`n=6: Ellipse \dagger B`):
+print(`n=7: Solotareff \dagger A`):
+print(`n=8: Solotareff \dagger B`):
+print(`n=9: Collision \dagger A`):
+print(`n=10: Collision \dagger B`):
+print(`n=11: Kahan A`):
+print(`n=12: Kahan B`):
+print(`n=13: ArcSin A`):
+print(`n=14: ArcSin B`):
+print(`n=15: 2D Example A`):
+print(`n=16: 2D Example B`):
+print(`n=17: 3D Example A`):
+print(`n=18: 3D Example B`):
+
+
+elif nargs=1 and args[1]=1 then
+
+print(`#1: Intersection \dagger A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=2 then
+
+print(`#2: Intersection \dagger B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=3 then
+
+print(`#3: Random \dagger A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=4 then
+
+print(`#4: Random \dagger B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=5 then
+
+print(`#5: Ellipse \dagger A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=6 then
+
+print(`#6: Ellipse \dagger B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=7 then
+
+print(`#7: Solotareff \dagger A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=8 then
+
+print(`#8: Solotareff \dagger B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=9 then
+
+print(`#9: Collision \dagger A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=10 then
+
+print(`#10: Collision \dagger B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=11 then
+
+print(`#11: Kahan A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=12 then
+
+print(`#12: Kahan B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=13 then
+
+print(`#13: ArcSin A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=14 then
+
+print(`#14: ArcSin B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=15 then
+
+print(`#15: 2D Example A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=16 then
+
+print(`#16: 2D Example B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=17 then
+
+print(`#17: 3D Example A`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+elif nargs=1 and args[1]=18 then
+
+print(`#18: 3D Example B`):
+print(`Equations:`):
+print(TTICADExamples(args[1])[1]):
+print(`Variables:`):
+print(TTICADExamples(args[1])[2]):
+
+else
+
+print(`No such example`):
+
+fi:
+
+end:

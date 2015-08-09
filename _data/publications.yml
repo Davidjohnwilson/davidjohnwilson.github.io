@@ -1,0 +1,231 @@
+#Thesis
+-   title: Advances in Cylindrical Algebraic Decomposition
+    author_list: David J Wilson
+    conference: University of Bath
+    journal_name: PhD Thesis
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/42577/
+    filename: djwthesis.pdf
+
+#Cell dims
+-   title: Using the distribution of cells by dimension in a cylindrical algebraic decomposition
+    author_list: David J. Wilson, Matthew England, Russell J. Bradford, and James H. Davenport
+    conference: SYNASC 2014
+    journal_name: Proceedings of the 2014 16th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing
+    volume:  
+    pages: 53-60
+    publisher: IEEE
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/40758/
+    arxiv_url: http://arxiv.org/abs/1409.1781
+    filename: 2014-WEBD-Dimension.pdf
+    abstract:  
+
+#RCTTI
+-   title: Truth table invariant cylindrical algebraic decomposition by regular chains
+    author_list: Russell Bradford, Changbo Chen, James H. Davenport, Matthew England,Marc Moreno Maza, and David J. Wilson
+    conference: CASC 2014
+    journal_name: Lecture Notes in Computer Science
+    volume: 8660
+    pages: 44-58
+    publisher: Springer International Publishing
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/38344/
+    arxiv_url: http://arxiv.org/abs/1401.6310
+    filename: 2014-BCDEMW-RCTTICAD-Preprint.pdf
+    abstract:  
+
+#TTI variable
+-   title: Choosing a Variable Ordering for Truth-Table Invariant Cylindrical Algebraic Decomposition by Incremental Triangular Decomposition
+    author_list: Matthew England, Russell Bradford, James H. Davenport, and David Wilson.
+    conference: ICMS 2014
+    journal_name: Lecture Notes in Computer Scienc
+    volume: 8592
+    pages: 450-457
+    publisher: Springer Berlin Heidelberg
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/39492/
+    arxiv_url: http://arxiv.org/abs/1405.6094
+    filename: 2014-EBDW-TTICADvariable-Preprint.pdf
+    abstract:  
+
+#RC CAD
+-   title: Using the Regular Chains Library to Build Cylindrical Algebraic Decompositions by Projecting and Lifting
+    author_list: Matthew England, David J. Wilson, Russell Bradford, and James H. Davenport
+    conference: ICMS 2014
+    journal_name: Lecture Notes in Computer Scienc
+    volume: 8592
+    pages: 458-465
+    publisher: Springer Berlin Heidelberg
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/39493/
+    arxiv_url: http://arxiv.org/abs/1405.6090
+    filename: 2014-EWBD-ProjectionCAD-Preprint.pdf
+    abstract:  
+
+#compare three heuristics
+-   title: A Comparison of Three Heuristics to Choose the Variable Ordering for Cylindrical Algebraic Decomposition
+    author_list: Zongyan Huang, Matthew England, David J. Wilson, James H. Davenport, and Lawrence C. Paulson
+    conference:  
+    journal_name: ACM Communications in Computer Algebra
+    volume: 48(3/4)
+    pages: 121-123
+    publisher: ACM
+    year: 2015
+    opus_url: http://opus.bath.ac.uk/39494/
+    arxiv_url: http://arxiv.org/abs/1405.6082
+    filename: 2014-HEWDP-Heuristics-Preprint.pdf
+    abstract:  
+
+#machine heuristice
+-   title: Applying Machine Learning to the Problem of Choosing a Heuristic to Select the Variable Ordering for Cylindrical Algebraic Decomposition
+    author_list: Zongyan Huang, Matthew England, David J. Wilson, James H. Davenport, Lawrence C. Paulson, and James Bridge
+    conference: CICM 2014 (Calculemus)
+    journal_name: Lecture Notes in Computer Science (Intelligent Computer Mathematics)
+    volume: 8543
+    pages: 92-107
+    publisher: Springer International Publishing
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/39232/
+    arxiv_url: http://arxiv.org/abs/1404.6369
+    filename: 2014-HEWDPB-MachineLearning.pdf
+    abstract:  
+
+#TTICAD inc
+-   title: Problem Formulation for Truth-Table Invariant Cylindrical Algebraic Decomposition by Incremental Triangular Decomposition
+    author_list: Matthew England, Russell J. Bradford, Changbo Chen, James H. Davenport, Marc Moreno Maza, and David J. Wilson
+    conference: CICM 2014 (Calculemus)
+    journal_name: Lecture Notes in Computer Science (Intelligent Computer Mathematics)
+    volume: 8543
+    pages: 45-60
+    publisher: Springer International Publishing
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/39231/
+    arxiv_url: http://arxiv.org/abs/1404.6371
+    filename: 2014-EBCDMMW-TTICADFormulation.pdf
+    abstract:  
+
+#sub-CAD
+-   title: Cylindrical Algebraic Sub-Decompositions
+    author_list: David J. Wilson, Russell J. Bradford, James H. Davenport, and Matthew England
+    conference:  
+    journal_name: Mathematics in Computer Science
+    volume: 8(2)
+    pages: 263-288
+    publisher:  
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/38148/
+    arxiv_url: http://arxiv.org/abs/1401.0647
+    filename: 2014-WBDE-subCAD.pdf
+    abstract:  
+
+#Branch Maple
+-   title: Branch Cuts in Maple 17 
+    author_list: Matthew England, Edgardo Cheb-Terrab, Russell J. Bradford, James H. Davenport, and David J. Wilson
+    conference:  
+    journal_name: ACM Communications in Computer Algebra
+    volume: 48(1/2)
+    pages: 24-27
+    publisher: ACM
+    year: 2014
+    opus_url: http://opus.bath.ac.uk/36721/
+    arxiv_url: http://arxiv.org/abs/1308.6523
+    filename: 2014-ECTBDW-BranchCuts.pdf
+    abstract:  
+
+#Branch
+-   title: Understanding Branch Cuts of Expressions
+    author_list: Matthew England, Russell J. Bradford, James H. Davenport, and David J. Wilson
+    conference: CICM 2013 (MKM)
+    journal_name: Lecture Notes in Computer Science (Intelligent Computer Mathematics)
+    volume: 7961
+    pages: 136-151
+    publisher: Springer Berlin Heidelberg
+    year: 2013
+    opus_url: http://opus.bath.ac.uk/32511/
+    arxiv_url: http://arxiv.org/abs/1304.7223
+    filename: 2013-EBDW-BranchCuts.pdf
+    abstract:  
+
+#Formulation
+-   title: Optimising Problem Formulation for Cylindrical Algebraic Decomposition
+    author_list: Russell J. Bradford, James H. Davenport, Matthew England, and David J. Wilson
+    conference: CICM 2013 (Calculemus)
+    journal_name: Lecture Notes in Computer Science (Intelligent Computer Mathematics)
+    volume: 7961
+    pages: 19-34
+    publisher: Springer Berlin Heidelberg
+    year: 2013
+    opus_url: http://opus.bath.ac.uk/34373/
+    arxiv_url: http://arxiv.org/abs/1304.7222
+    filename: 2013-BDEW-Formulation.pdf
+    abstract:  
+
+#Piano
+-   title: A “Piano Movers” Problem Reformulated
+    author_list: David J. Wilson, James H. Davenport, Matthew England, and Russell J. Bradford
+    conference: SYNASC 2013
+    journal_name: Proceedings of the 15th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing
+    volume:  
+    pages: 53-60
+    publisher: IEEE
+    year: 2013
+    opus_url: http://opus.bath.ac.uk/36795/
+    arxiv_url: http://arxiv.org/abs/1309.1588
+    filename: 2013-WDEB-Piano.pdf
+    abstract:  
+
+#TTICAD
+-   title: Cylindrical Algebraic Decompositions for Boolean Combinations
+    author_list: Russell J. Bradford, James H. Davenport, Matthew England, Scott McCallum, and David J. Wilson
+    conference: ISSAC 2013
+    journal_name: Proceedings of the 38th International Symposium on Symbolic and Algebraic Computation
+    volume:  
+    pages: 125-132
+    publisher: ACM
+    year: 2013
+    opus_url: http://opus.bath.ac.uk/33926/
+    arxiv_url: http://arxiv.org/abs/1304.7603
+    filename: 2013-BDEMW-TTICAD.pdf
+    abstract:  
+
+#CAD Repository
+-   title: A Repository for CAD Examples
+    author_list: David J. Wilson, Russell J. Bradford, and James H. Davenport
+    conference:  
+    journal_name: ACM Communications in Computer Algebra
+    volume: 46(3/4)
+    pages: 67-69
+    publisher: ACM
+    year: 2013
+    opus_url: http://opus.bath.ac.uk/31731/
+    arxiv_url:  
+    filename: 2013-WBD-Repository.pdf
+    abstract:  
+
+#Verification
+-   title: Program Verification in the Presence of Complex Numbers, Functions with Branch Cuts etc.
+    author_list: James H. Davenport, Russell J. Bradford, Matthew England, and David J. Wilson
+    conference: SYNASC 2012
+    journal_name: Proceedings of the 2012 14th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing
+    volume:  
+    pages: 83-88
+    publisher: IEEE
+    year: 2012
+    opus_url: http://opus.bath.ac.uk/32606/
+    arxiv_url: http://arxiv.org/abs/1212.5417
+    filename: 2012-DBEW-Verification.pdf
+    abstract:  
+
+#Grobner Bases
+-   title: Speeding Up Cylindrical Algebraic Decomposition by Gröbner Bases
+    author_list: David J. Wilson, Russell J. Bradford, and James H. Davenport
+    conference: CICM 2012 (Calculemus)
+    journal_name: Intelligent Computer Mathematics
+    volume: 7362
+    pages: 280-294
+    publisher: "Springer Berlin Heidelberg"
+    year: 2012
+    opus_url: http://opus.bath.ac.uk/29509/
+    arxiv_url: http://arxiv.org/abs/1205.6285
+    filename: 2012-WBD-Grobner.pdf
