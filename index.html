@@ -16,7 +16,7 @@ layout: default
   <h3><i class="fa fa-bar-chart"></i> Data Scientist</h3>
     <p>I am very interested in the increasing role of Data in business, and what can be gleamed from analysis of various data sources. I have experience in working with video-based data, am completing the Udacity Data Analyst nanodegree, and building a portfolio of interesting data studies.</p>
     <p>I will be posting interesting data studies on this site below, as well as discussions of technologies and frameworks I use.</p>
-    <center><p><a href="./developer/index.html"><i class="fa fa-bar-chart"></i> Learn More about Data Science <i class="fa fa-bar-chart"></i></a></p></center>
+    <center><p><a href="./data/index.html"><i class="fa fa-bar-chart"></i> Learn More about Data Science <i class="fa fa-bar-chart"></i></a></p></center>
 
   <h3><i class="fa fa-laptop"></i> Developer</h3>
     <p>Having spent three years researching for my PhD in theoretical computer science, I am  making the transition into industry. Based in San Francisco, I am currently working for <a href="http://www.guidespark.com" target="_blank">GuideSpark</a> as a Data Engineer, and was originally hired as part of the <a href="http://www.siliconvalleyinternship.com/" target="_blank">Silicon Valley Internship Programme</a>.</p>
@@ -31,24 +31,5 @@ layout: default
     <p>I started learning ballet in my early twenties, and have reviewed performances and written features for various websites. I am passionate about engaging new ballet audiences, and have worked recently with the Royal Opera House and other organisations to this end.</p>
     <center><p><a href="./reviewer/index.html"><i class="fa fa-newspaper-o"></i> Learn More about Reviews <i class="fa fa-newspaper-o"></i></a></p></center>
     
-
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        {{ post.excerpt }}
-        Tags: {% for tag in post.tags %}  <b>{{tag}}</b>  {% endfor %}
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
