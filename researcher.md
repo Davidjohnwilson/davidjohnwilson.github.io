@@ -4,7 +4,7 @@ title: Researcher
 permalink: /researcher/
 ---
 
-##{% icon fa-flask %} Research Summary
+##<i class="fa fa-flask"></i> Research Summary
 
 I have spent three years researching into *Cylindrical Algebraic Decomposition* (CAD) for my PhD at the [University of Bath](university-of-bath). I was supervised by Prof. James Davenport and Dr Russell Bradford, as part of the Real Geometry and Connectedness via Triangular Description resarch group. I recently submitted by thesis (available: [PDF]()) and will be defending my thesis later this year.
 
@@ -14,7 +14,7 @@ The following is a short video explaining the ideas behind my research, submitte
 
 <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/M33WRwr4bAY" allowfullscreen></iframe>
 
-##{% icon fa-flask %} Publications
+##<i class="fa fa-flask"></i> Publications
 
 The following is a list of my peer-reviewed publications, in preprint form, hosted on the [arXiv](arxiv). They are all freely-available on the [University of Bath Opus Repository](opus), along with various non-peer reviewed technical reports and peer-reviewed pedagogical articles.
 
@@ -45,9 +45,9 @@ The following is a list of my peer-reviewed publications, in preprint form, host
 {% endfor %}
 </ul>
 
-##{% icon fa-flask %} Contact
+##<i class="fa fa-flask"></i> Contact
 
-If you are interested in contacting me regarding academic research: [{% icon fa-envelope %} Contact](mailto:researcher@davidjw.co.uk?Subject=Research%20Contact%20Enquiry)
+If you are interested in contacting me regarding academic research: [<i class="fa fa-envelope"></i> Contact](mailto:researcher@davidjw.co.uk?Subject=Research%20Contact%20Enquiry)
 
 
 
