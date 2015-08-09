@@ -4,6 +4,7 @@ title: Data Scientist
 permalink: /data/
 ---
 
+ 
 
 ##<i class="fa fa-bar-chart"></i> Contact
 
