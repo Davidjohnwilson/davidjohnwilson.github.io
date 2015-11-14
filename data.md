@@ -11,7 +11,7 @@ Data science allows me to combine my research-focused analytical skills with my 
 This page is currently under construction. The aim is to have a collection of blog entries including independent data studies (sourced either from open data sets, Kaggle competitions, or Udacity projects), mathematical discussions, and thoughts on industry and academia. 
 
 
-##<i class="fa fa-bar-chart"></i> Data Studies
+##<i class="fa fa-bar-chart"></i> Blog Posts
 
 <ul class="post-list">
 {% for post in site.posts %}
