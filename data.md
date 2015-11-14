@@ -8,7 +8,7 @@ Data science allows me to combine my research-focused analytical skills with my 
 
 ##Under Construction
 
-This page is currently under construction. The aim is to have a collection of independent data studies (a sample outline of one is linked below) sourced either from open data sets, Kaggle competitions, or Udacity projects. 
+This page is currently under construction. The aim is to have a collection of blog entries including independent data studies (sourced either from open data sets, Kaggle competitions, or Udacity projects), mathematical discussions, and thoughts on industry and academia. 
 
 
 ##<i class="fa fa-bar-chart"></i> Data Studies
