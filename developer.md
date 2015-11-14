@@ -40,6 +40,6 @@ I am currently working on contributing to the open source sympolic computation l
 
 ##<i class="fa fa-laptop"></i> Contact
 
-If you are interested in contacting me regarding development: [<i class="fa fa-envelope"></i> Contact](mailto:developer@davidjw.co.uk?Subject=Development%20Contact%20Enquiry)
+If you are interested in contacting me regarding development: [<i class="fa fa-envelope"></i> Contact](mailto:developer@davidjw.co.uk?Subject=Development%20Contact%20Enquiry) or download my [<i class="fa fa-file-text"></i> Resume](/publications/djwthesis.pdf).
 
 

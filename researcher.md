@@ -6,7 +6,7 @@ permalink: /researcher/
 
 ##<i class="fa fa-flask"></i> Research Summary
 
-I have spent three years researching into *Cylindrical Algebraic Decomposition* (CAD) for my PhD at the [University of Bath](university-of-bath). I was supervised by Prof. James Davenport and Dr Russell Bradford, as part of the Real Geometry and Connectedness via Triangular Description resarch group. I submitted by thesis in July 2014 (available: [PDF](/publications/djwthesis.pdf)) and successfully defended in November 2014 (with Prof. C K Yap and Prof N Vorobjov as my examiners). I was awarded my PhD in January 2015, and graduated in July 2015. 
+I have spent three years researching into *Cylindrical Algebraic Decomposition* (CAD) for my PhD at the [University of Bath](university-of-bath). I was supervised by Prof. James Davenport and Dr Russell Bradford, as part of the Real Geometry and Connectedness via Triangular Description resarch group. I submitted by thesis in July 2014 (available: [<i class="fa fa-book"></i> PDF](/publications/djwthesis.pdf)) and successfully defended in November 2014 (with Prof. C K Yap and Prof N Vorobjov as my examiners). I was awarded my PhD in January 2015, and graduated in July 2015. 
 
 This page describes my academic work and publications.
 

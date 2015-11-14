@@ -2,14 +2,14 @@
 layout: post
 title:  "Transitioning from PhD to Industry"
 date:   2015-11-13 20:00:00
-categories: phd academia software-engineering data-science
+tags: phd academia software-engineering data-science
 ---
 
 What does a transition from academia into industry involve? Here are some thoughts 
 
 ###The Journey
 
-It takes a long time to gain a PhD. In 2003, the NSF reported that the median time from registering in graduate school for a physical sciences PhD (including mathematics and computer science) in the US is 6.8 years [NSF](http://www.nsf.gov/statistics/infbrief/nsf06312/nsf06312.pdf). Combining this with a four year undergraduate degree results in over 10 years of college studying for a PhD. In UK, due to early specialization, the time to completion is lower than most countries [EPSRC (mathematics)](https://www.epsrc.ac.uk/newsevents/pubs/epsrc-mathematical-sciences-programme-action-plan-international-review-of-mathematics/), but still remains around 3.5 years. This is following a 3-4 year Bachelor’s degree and often a 1-2 year Master’s degree, resulting in a minimum of 6.5 years, but often, up to 9.5 years.
+It takes a long time to gain a PhD. In 2003, the NSF reported that the median time from registering in graduate school for a physical sciences PhD (including mathematics and computer science) in the US is 6.8 years [[NSF](http://www.nsf.gov/statistics/infbrief/nsf06312/nsf06312.pdf)]. Combining this with a four year undergraduate degree results in over 10 years of college studying for a PhD. In UK, due to early specialization, the time to completion is lower than most countries [[EPSRC (mathematics)](https://www.epsrc.ac.uk/newsevents/pubs/epsrc-mathematical-sciences-programme-action-plan-international-review-of-mathematics/)], but still remains around 3.5 years. This is following a 3-4 year Bachelor’s degree and often a 1-2 year Master’s degree, resulting in a minimum of 6.5 years, but often, up to 9.5 years.
 
 My personal experience was a mixture of UK and US education: a 4 year undergraduate Masters at Oxford (MMath) followed by a 2 year postgraduate research at Rutgers (MS), followed by a PhD at Bath which took a little under 3 years to submit. So 9 years of university-level education later, I hand in my thesis and head out to Silicon Valley to start work in ‘industry' (it would be another 5 months until the viva/corrections/printing was complete and a further 6 months until my graduation ceremony - academia doesn’t rush things!).
 

@@ -32,5 +32,5 @@ Tags: {% for tag in post.tags %}  <b>{{tag}}</b>  {% endfor %}
 
 ##<i class="fa fa-bar-chart"></i> Contact
 
-If you are interested in contacting me regarding development: [<i class="fa fa-envelope"></i> Contact](mailto:developer@davidjw.co.uk?Subject=Development%20Contact%20Enquiry)
+If you are interested in contacting me regarding development: [<i class="fa fa-envelope"></i> Contact](mailto:developer@davidjw.co.uk?Subject=Development%20Contact%20Enquiry) or download my [<i class="fa fa-file-text"></i> Resume](/publications/djwthesis.pdf).
 
