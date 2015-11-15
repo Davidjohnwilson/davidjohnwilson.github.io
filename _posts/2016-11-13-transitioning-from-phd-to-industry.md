@@ -5,6 +5,8 @@ date:   2015-11-13 20:00:00
 tags: phd academia software-engineering data-science
 ---
 
+*This piece is currently in draft state. If you have any thoughts, please let me know on the email at the bottom of the page.*
+
 What does a transition from academia into industry involve? Here are some thoughts 
 
 ###The Journey
