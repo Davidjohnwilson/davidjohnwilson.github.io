@@ -6,7 +6,7 @@ permalink: /developer/
 
 ##<i class="fa fa-laptop"></i> Background
 
-I am currently working in San Francisco at [GuideSpark](http://www.guidespark.com) as part of the [Silicon Valley Internship Programme](http://www.siliconvalleyinternship.com/). I was hired as a Software Engineer and have since been promoted to the Data Engineer role.
+I am currently working in San Francisco at [GuideSpark](http://www.guidespark.com) as part of the [Silicon Valley Internship Programme](http://www.siliconvalleyinternship.com/). I was hired as a Software Engineer and have since been promoted to a Data Engineer role, followed by a Data Scientist position.
 
 This page details my skills and experience, and will be kept up to date with any side-projects I am working on.
          
@@ -35,6 +35,8 @@ I also have some experience or training in the following languages:
 ##<i class="fa fa-laptop"></i> Projects
 
 I am currently working on contributing to the open source sympolic computation library SymPy.
+
+I am also working on a small number of sideprojects, including [`pypoly`](https://github.com/Davidjohnwilson/PythonPolys): a small python library for symbolic manipulation of polynomials.
 
 <!-- <iframe src="http://githubbadge.appspot.com/davidjohnwilson?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe> -->
 
