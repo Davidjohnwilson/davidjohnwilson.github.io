@@ -6,7 +6,9 @@ permalink: /developer/
 
 ## <i class="fa fa-laptop"></i> Background
 
-I am currently working in San Francisco at [GuideSpark](http://www.guidespark.com), originally being hired as part of the [Silicon Valley Internship Programme](http://www.siliconvalleyinternship.com/). I joined as a Software Engineer and have since been promoted to a Data Engineer role, followed by a Data Scientist position.
+I am currently working at [Facebook](http://www.facebook.com/careers) in Menlo Park as a Business Intelligence Engineer. I work on the People Insights team, supporting the HR team and leadership. My role currently involves a range of data responsibilities including building pipelines, creating dashboards, productionalizing ML models, and educating stakeholders on understanding data.
+
+Previously I worked at [GuideSpark](http://www.guidespark.com) (originally being hired as part of the [Silicon Valley Internship Programme](http://www.siliconvalleyinternship.com/)). I joined as a Software Engineer and was promoted to a Data Engineer role, followed by a Data Scientist position.
 
 This page details my skills and experience, and will be kept up to date with any side-projects I am working on. 
 
@@ -19,18 +21,20 @@ I am currently embarking on a career as a software engineer and data scientist. 
 
 Currently, I have the most experience in the following languages and technologies:
 
+* Python (2/3) including pandas and sklearn;
+* R;
+* Tableau;
 * Ruby (and the Ruby on Rails Framework);
-* Python (2/3);
 * HTML5, CSS3 (including Bootstrap), JavaScript (including jQuery);
 * Maple/Matlab and a collection of mathematical languages;
-* MySQL, ElasticSearch, MongoDB;
+* Oracle SQL, MySQL, ElasticSearch, MongoDB;
 * Git/GitHub, JIRA, SVN, Version One.
 
 
 I also have some experience or training in the following languages:
 
-* R;
 * Java (including some basic Android development);
+* PHP;
 * C (and Cuda for GPU);
 * Coq.
 
