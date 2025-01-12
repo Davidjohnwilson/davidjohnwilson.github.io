@@ -2,6 +2,7 @@
 layout: page
 title: Developer
 permalink: /developer/
+show_in_nav: false
 ---
 
 ## <i class="fa fa-laptop"></i> Background
