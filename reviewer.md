@@ -14,6 +14,7 @@ This page is a portfolio of some of these reviews and features, along with selec
 
 <ul>
 <hr>
+<br />
 {% for rev in site.data.reviews %}
   <li>
     <i>{{ rev.quote }}</i>
@@ -22,13 +23,17 @@ This page is a portfolio of some of these reviews and features, along with selec
     <br />
     <a class="link" href="{{ rev.link_1 }}">{{ rev.piece_1 }}</a>
     {% if rev.link_2 %} and <a class="link" href="{{ rev.link_2 }}">{{ rev.piece_2 }}</a>{% endif %}
+    <br />
+    <br />
    </li>
   <hr>
+  <br />
 {% endfor %}
 </ul>
-
+<!-- 
 ## <i class="fa fa-newspaper-o"></i> Contact
 
 If you are interested in contacting me regarding reviewing or ballet articles: [<i class="fa fa-envelope"></i> Contact](mailto:reviewer@davidjw.co.uk?Subject=Reviewing%20Contact%20Enquiry)
 
 
+ -->

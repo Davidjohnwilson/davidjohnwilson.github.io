@@ -1,13 +1,12 @@
 # Site settings
 title: David John Wilson
-email: info@davidjw.co.uk
+email: mrdavidjwilson@gmail.com
 description: > #
   A personal website for David John Wilson.
-  Includes information about research, software development, and ballet
+  Includes information about data science, research, and ballet
   reviews.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.davidjw.co.uk" # the base hostname & protocol for your site
-twitter_username: D_J_Wilson
 github_username:  davidjohnwilson
 
 # Build settings

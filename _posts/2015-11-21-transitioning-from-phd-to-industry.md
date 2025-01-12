@@ -9,7 +9,7 @@ tags: phd academia software-engineering data-science
 
 What does a transition from academia into industry involve? Here are some thoughts 
 
-###The Journey
+### The Journey
 
 It takes a long time to gain a PhD. In 2003, the NSF reported that the median time from registering in graduate school for a physical sciences PhD (including mathematics and computer science) in the US is 6.8 years [[NSF](http://www.nsf.gov/statistics/infbrief/nsf06312/nsf06312.pdf)]. Combining this with a four year undergraduate degree results in over 10 years of college studying for a PhD. In UK, due to early specialization, the time to completion is lower than most countries [[EPSRC (mathematics)](https://www.epsrc.ac.uk/newsevents/pubs/epsrc-mathematical-sciences-programme-action-plan-international-review-of-mathematics/)], but still remains around 3.5 years. This is following a 3-4 year Bachelor’s degree and often a 1-2 year Master’s degree, resulting in a minimum of 6.5 years, but often, up to 9.5 years.
 
@@ -21,7 +21,7 @@ My personal experience was a mixture of UK and US education: a 4 year undergradu
 
 So after nearly a decade in various incarnations of the same general atmosphere, how is the transition into industry? In a word, to quote Gollum, tricksy.
 
-###Getting There and Acclimatization
+### Getting There and Acclimatization
 
 It can be hard to work out how to convert skills developed during a PhD into actionable skills that are usable in the workplace, and this often results in sort of ‘growing pains’ when you are applying for and starting your first job. I found this hard when interviewing for positions, and even harder to act upon once I started my new job. 
 
@@ -35,7 +35,7 @@ I think it is important to play to your strengths and I hope this blog post help
 
 What can you do to improve your acclimatization? Simply being aware can be enough. Also, if you are the first PhD in your department or team then be aware that it can be tricky for both you and your boss to work out how to make your learning style fit.
 
-###The downsides of moving into industry?
+### The downsides of moving into industry?
 
 * **Learning is no longer your sole purpose:** But use your passion for learning to shape your company’s values or influence your peers. 
 * **Not learning:** Very easy to get frustrated and feel you're not learning. Find other outlets: for me included an online Udacity nano degree, side projects, mathematical/coding puzzles ([Project Euler](http://www.projecteuler.net)), and reading papers or textbooks (currently Concrete Mathematics by Graham, Knuth, Patashnik). 
@@ -43,7 +43,7 @@ What can you do to improve your acclimatization? Simply being aware can be enoug
 * **Hard to stay up to date in your research field:** this is important to do however, even if irrelevant to your job.
 
 
-###Not all bad!
+### Not all bad!
 
 I've just listed a lot of difficulties when transitioning into industry. So why do it? 
 
